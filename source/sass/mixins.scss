@@ -1,0 +1,145 @@
+@mixin bg-image($url, $bg-size) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: $bg-size;
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+/* typography */
+@mixin h1 {
+  font-family: $raleway;
+  font-weight: 900;
+  font-size: 200px;
+  line-height: 1.7;
+
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+@mixin h1-mobile {
+  @include h1;
+
+  font-size: 72px;
+}
+
+@mixin h2 {
+  font-family: $montserrat;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.22;
+
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+@mixin h2-mobile {
+  @include h2;
+
+  font-size: 32px;
+}
+
+@mixin h3 {
+  @include h2;
+
+  font-size: 28px;
+  line-height: 1.21;
+}
+
+@mixin h3-mobile {
+  @include h3;
+
+  font-size: 24px;
+}
+
+@mixin h4 {
+  @include h1;
+
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.19;
+}
+
+@mixin h4-mobile {
+  @include h4;
+
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+@mixin text-big {
+  font-family: $firasans;
+
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+@mixin text-big-mobile {
+  @include text-big;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@mixin text-big-lh {
+  @include text-big;
+
+  line-height: 1.5;
+}
+
+@mixin text-regular {
+  @include text-big;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@mixin text-regular-mobile {
+  @include text-regular;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@mixin text-regular-lh {
+  @include text-regular;
+
+  line-height: 1.4;
+}
+
+@mixin text-form-placeholder {
+  font-family: $firasans;
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.18;
+}
+
+@mixin text-form-btn {
+  @include text-form-placeholder;
+}
+
+@mixin text-promo {
+  @include h3-mobile;
+}
+
+@mixin text-promo-mobile {
+  @include text-promo;
+
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+@mixin text-small {
+  font-family: $firasans;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+}
