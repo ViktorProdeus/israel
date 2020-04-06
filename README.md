@@ -1,4 +1,4 @@
-# Проект Акселератора «izrael»
+# Проект Акселератора «Израиль»
 # ![Image of project «Израиль»](https://github.com/ViktorProdeus/izrael/blob/master/izrael.jpg)
 
 * Вёрстка макета: [Посмотреть](https://viktorprodeus.github.io/izrael/build/).  
