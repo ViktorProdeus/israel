@@ -1,5 +1,5 @@
 # Проект Акселератора «izrael»
-# ![Image of project «Фитнес центр»](https://github.com/ViktorProdeus/izrael/blob/master/izrael.jpg)
+# ![Image of project «Израиль»](https://github.com/ViktorProdeus/izrael/blob/master/izrael.jpg)
 
 * Вёрстка макета: [Посмотреть](https://viktorprodeus.github.io/izrael/build/).  
 * Исполнитель: [Виктор Продеус](https://up.htmlacademy.ru/adaptive/16/user/814599).
