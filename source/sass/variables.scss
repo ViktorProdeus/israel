@@ -1,41 +1,52 @@
-/* Color */
-$black: #484848;
-$blue: #1fc0fc;
-$yellow: #ffc341;
-$yellow-lighten: #ffd701;
-$error: #ff0000;
 
-/* gradient */
-$gradient: linear-gradient(108.42deg, $yellow 20.46%, $yellow-lighten 65.31%);
+// Color
+//---------------------------------
 
-$gradient-active: linear-gradient(108.42deg, $yellow 20.46%, $yellow-lighten 65.31%);
+$black:                           #484848 !default;
+$blue:                            #1fc0fc !default;
+$yellow:                          #ffc341 !default;
+$yellow--lighten:                 #ffd701 !default;
+$error:                           #ff0000 !default;
 
-$gradient-hover: linear-gradient(143.55deg, $yellow -50.3%, $yellow-lighten 63.1%);
+// gradient
+//---------------------------------
 
-$gradient-click: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, $yellow -50.3%, $yellow-lighten 63.1%);
-
-
-/* fonts */
-$firasans: "Fira Sans", "Arial", sans-serif;
+$gradient:                         linear-gradient(108.42deg, $yellow 20.46%, $yellow--lighten 65.31%);
+$gradient--active:                 linear-gradient(108.42deg, $yellow 20.46%, $yellow--lighten 65.31%);
+$gradient--hover:                  linear-gradient(143.55deg, $yellow -50.3%, $yellow--lighten 63.1%);
+$gradient--click:                  radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, $yellow -50.3%, $yellow--lighten 63.1%);
 
 
-$raleway: "Raleway", "Arial", sans-serif;
+// Typography
+//---------------------------------
 
+$font-family--sansSerif:           "Arial", sans-serif !default;
 
-$montserrat: "Montserrat", "Arial", sans-serif;
+//fonts
 
-/* shadow */
-$shadow-text: 0 1px 4px rgba(#000000, 0.12);
-$shadow-icon: 0 1px 4px rgba(#000000, 0.05);
-$shadow-bubble: 0 3px 12px rgba(#000000, 0.1);
+$firasans:                         "Fira Sans", $font-family--sansSerif;
+$raleway:                          "Raleway", $font-family--sansSerif;
+$montserrat:                       "Montserrat", $font-family--sansSerif;
 
-/* Media queries */
-$mobile-max: 767px;
-$tablet-max: 1023px;
-$desktop-min: 1024px;
+// shadow
+//---------------------------------
 
-/* retina */
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
+$shadow--text:                      0 1px 4px rgba(#000000, 0.12);
+$shadow--icon:                      0 1px 4px rgba(#000000, 0.05);
+$shadow--bubble:                    0 3px 12px rgba(#000000, 0.1);
 
-/* animation */
+// Media queries
+//---------------------------------
+
+$mobile--max:                       767px !default;
+$tablet--max:                       1023px !default;
+$desktop--min:                      1024px !default;
+$desktop--max:                      1366px !default;
+
+// retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
+
+// animation

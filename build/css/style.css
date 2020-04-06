@@ -282,8 +282,6 @@ template, [hidden] {
 /**
  * Add the correct display in IE 10.
  */
-/* vendor */
-/* base */
 @font-face {
   font-family: "firasans";
   font-style: normal;
@@ -324,17 +322,9 @@ template, [hidden] {
   src: url("../fonts/raleway-extrabold-webfont.woff2") format("woff2");
   src: url("../fonts/raleway-extrabold-webfont.woff") format("woff"); }
 
-/* Color */
-/* gradient */
-/* fonts */
-/* shadow */
-/* Media queries */
-/* retina */
-/* animation */
-/* typography */
 body {
   margin: 0;
-  font-family: "Fira Sans", Arial, sans-serif;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.4;
@@ -380,4 +370,29 @@ input[type="radio"].visually-hidden {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-/* blocks */
+.container {
+  padding: 0 17px;
+  max-width: 1166px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto; }
+
+.intro {
+  min-height: 908px;
+  background-color: #e5e7ea;
+  background-image: url("../img/desktop/main-header__bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../img/desktop/main-header__bg@2x.jpg"); } }
+
+.main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }

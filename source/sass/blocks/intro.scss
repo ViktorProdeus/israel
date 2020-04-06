@@ -1,0 +1,12 @@
+.intro {
+  min-height: 908px;
+  background-color: #e5e7ea;
+
+  @include bg-image("../img/desktop/main-header__bg@1x.jpg", cover);
+}
+
+@include retina {
+  .intro {
+    background-image: url("../img/desktop/main-header__bg@2x.jpg");
+  }
+}

@@ -1,14 +1,20 @@
 @import "normalize";
 
-/* vendor */
+// base
+//---------------------------------
 
-
-/* base */
 @import "fonts";
 @import "variables";
 @import "mixins";
 @import "base";
 @import "helpers";
 
+// blocks
+//---------------------------------
 
-/* blocks */
+@import "blocks/container";
+@import "blocks/intro";
+@import "blocks/main-header";
+
+// vendor
+//---------------------------------
