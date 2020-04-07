@@ -19,15 +19,21 @@
 
     <div class="container">
       <header class="main-header">
-        <a class="main-header__phone" href="tel:+(972)2–621–6581" aria-label="телефон компании">+ (972) 2 – 621 – 6581</a>
-
         <a class="logo main-header__logo">
-          <img src="img/desktop/logo@1x.png" alt="логотип">
+          <!-- 1х: 137px*48px; 2x: 274px*96px -->
+          <img src="img/all/logo@1x.png" width="137" height="48" srcset="img/all/logo@1x.png 1x, img/all/logo@2x.png 2x"
+            alt="логотип">
         </a>
 
-        <a href="#" class="main-header__order">
-          заказать звонок
-        </a>
+        <div class="main-header__wrapper-phone">
+          <a class="main-header__phone" href="tel:+(972)2–621–6581" aria-label="телефон компании">+ (972) 2 – 621 –
+            6581</a>
+
+          <a href="#" class="main-header__order">
+            заказать звонок
+          </a>
+        </div>
+
       </header>
 
       <p class="intro__slogan">

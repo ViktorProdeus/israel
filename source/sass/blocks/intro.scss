@@ -1,12 +1,85 @@
 .intro {
+  margin: 0 auto;
+  max-width: 1566px;
   min-height: 908px;
   background-color: #e5e7ea;
 
-  @include bg-image("../img/desktop/main-header__bg@1x.jpg", cover);
-}
+  @include bg-image("../img/all/intro__bg@1x.jpg", cover);
 
-@include retina {
-  .intro {
-    background-image: url("../img/desktop/main-header__bg@2x.jpg");
+  &__slogan {
+    margin: 472px auto 0;
+    max-width: 345px;
+
+    @include text-promo;
+    text-shadow: $shadow--text;
+  }
+
+  &__button {
+    position: relative;
+    margin: 57px auto 0;
+
+    display: block;
+    width: 17px;
+    height: 26px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/all/mouse.png");
+    border-radius: 50%;
+    transition: box-shadow $animate;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 8px 2px $yellow;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+
+      content: "";
+      top: -25px;
+      left: -28px;
+
+      width: 76px;
+      height: 132px;
+
+      background-image: url("../img/svg/mouse-button-stroke.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  @include retina {
+    background-image: url("../img/all/intro__bg@2x.jpg");
+  }
+
+  @media (max-width: $tablet--max) {
+    min-height: 680px;
+
+    &__slogan {
+      margin-top: 280px;
+
+      @include text-promo-mobile;
+    }
+  }
+
+  @media (max-width: $mobile--max) {
+    min-height: 617px;
+
+    @include bg-image("../img/mobile/intro__bg@1x.jpg", cover);
+
+    @include retina {
+      background-image: url("../img/mobile/intro__bg@2x.jpg");
+    }
+
+    &__slogan {
+      margin-top: 268px;
+    }
+
+    &__button::before {
+      top: -26px;
+      left: -30px;
+    }
   }
 }
