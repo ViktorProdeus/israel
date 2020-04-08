@@ -1,0 +1,13 @@
+.main-content {
+  h2 {
+    @include h2;
+
+    color: $blue;
+  }
+
+  @media (max-width: $tablet--max) {
+    h2 {
+      @include h2-mobile;
+    }
+  }
+}

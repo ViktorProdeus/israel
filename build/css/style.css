@@ -360,6 +360,14 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0; }
+
 .site-wrapper {
   min-height: 100vh;
   display: -webkit-box;
@@ -562,3 +570,194 @@ input[type="radio"].visually-hidden {
         max-width: 100%; }
       .main-header__order {
         margin-bottom: 0; } }
+
+.main-content h2 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1fc0fc; }
+
+@media (max-width: 1023px) {
+  .main-content h2 {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    font-size: 32px; } }
+
+.about {
+  position: relative;
+  z-index: 1;
+  max-width: 1566px;
+  margin: 0 auto; }
+  .about h2 {
+    margin-top: -10px;
+    margin-bottom: 23px;
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+    text-align: center; }
+  .about p {
+    font-family: "Firasans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 720px;
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+    text-align: center; }
+    .about p:nth-child(odd) {
+      -webkit-transform: translateX(9px);
+              transform: translateX(9px); }
+  .about__wrapper-video {
+    max-width: 1366px;
+    max-height: 460px;
+    margin: 0 auto; }
+  .about__movie {
+    position: relative;
+    margin: 46px auto 0;
+    padding-top: 33.6652%;
+    max-width: 870px;
+    background-color: transparent;
+    background-image: url("../img/all/poster@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .about__movie {
+        background-image: url("../img/all/poster@2x.png"); } }
+  .about__movie-play {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -52%);
+            transform: translate(-50%, -52%);
+    width: 96px;
+    height: 96px;
+    background-color: rgba(255, 255, 255, 0.32);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer; }
+    .about__movie-play::before {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      width: 64px;
+      height: 64px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: white;
+      -webkit-transition: background 0.2s linear, -webkit-box-shadow 0.2s linear;
+      transition: background 0.2s linear, -webkit-box-shadow 0.2s linear;
+      transition: box-shadow 0.2s linear, background 0.2s linear;
+      transition: box-shadow 0.2s linear, background 0.2s linear, -webkit-box-shadow 0.2s linear; }
+    .about__movie-play::after {
+      position: absolute;
+      z-index: 2;
+      content: "";
+      width: 15px;
+      height: 19px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-31%, -50%);
+              transform: translate(-31%, -50%);
+      background-image: url("../img/svg/play.svg");
+      background-repeat: no-repeat;
+      -webkit-transition: background 0.2s linear;
+      transition: background 0.2s linear; }
+    .about__movie-play:hover::before {
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+              box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
+    .about__movie-play:hover::after {
+      background-image: url("../img/svg/play-hover.svg"); }
+    .about__movie-play:focus {
+      outline: none; }
+    .about__movie-play:focus::before {
+      background-color: #f4f4f4; }
+    .about__movie-play:focus::after {
+      background-image: url("../img/svg/play.svg"); }
+  .about::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    padding-top: 44.204%;
+    max-width: 1366px;
+    width: 100%;
+    top: 158px;
+    right: 0;
+    background-color: white;
+    background-image: url("../img/all/about__bg@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .about::after {
+        background-image: url("../img/all/about__bg@2x.png"); } }
+  @media (max-width: 1023px) {
+    .about h2 {
+      margin-top: 17px;
+      margin-bottom: 23px;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      text-align: center; }
+    .about__movie-play {
+      width: 80px;
+      height: 80px; }
+      .about__movie-play::before {
+        width: 53.33px;
+        height: 53.33px; }
+      .about__movie-play::after {
+        width: 12.5px;
+        height: 15.83px;
+        background-size: 12.5px 15.83px; } }
+  @media (max-width: 767px) {
+    .about p {
+      font-family: "Firasans", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.6;
+      display: inline;
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      text-align: left;
+      line-height: 1.69; }
+    .about__movie {
+      background-image: url("../img/mobile/poster@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-width: 320px;
+      margin: 48px auto 0;
+      padding-top: 68.295%; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .about__movie {
+      background-image: url("../img/mobile/poster@2x.png"); } }
+  @media (max-width: 767px) {
+    .about__movie-play {
+      top: 54%; }
+      .about__movie-play::before {
+        -webkit-transform: translate(-51%, -50%);
+                transform: translate(-51%, -50%); }
+    .about::after {
+      padding-top: 58.128%;
+      max-width: 320px;
+      width: 100%;
+      top: 197px;
+      background-image: url("../img/mobile/about__bg@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .about::after {
+      background-image: url("../img/mobile/about__bg@2x.png"); } }
