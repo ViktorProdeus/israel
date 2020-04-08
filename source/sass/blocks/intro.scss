@@ -6,8 +6,9 @@
 
   @include bg-image("../img/all/intro__bg@1x.jpg", cover);
 
-  &__slogan {
+  p {
     margin: 472px auto 0;
+    transform: translateX(3px);
     max-width: 345px;
 
     @include text-promo;
@@ -17,6 +18,7 @@
   &__button {
     position: relative;
     margin: 57px auto 0;
+    transform: translateX(3px);
 
     display: block;
     width: 17px;
@@ -24,7 +26,7 @@
     border: none;
     background-color: transparent;
     background-image: url("../img/all/mouse.png");
-    border-radius: 50%;
+    border-radius: 40%;
     transition: box-shadow $animate;
     cursor: pointer;
 
@@ -38,8 +40,8 @@
       z-index: 1;
 
       content: "";
-      top: -25px;
-      left: -28px;
+      top: -26px;
+      left: -29px;
 
       width: 76px;
       height: 132px;
@@ -57,7 +59,7 @@
   @media (max-width: $tablet--max) {
     min-height: 680px;
 
-    &__slogan {
+    p {
       margin-top: 280px;
 
       @include text-promo-mobile;
@@ -73,13 +75,18 @@
       background-image: url("../img/mobile/intro__bg@2x.jpg");
     }
 
-    &__slogan {
+    p {
       margin-top: 268px;
+      transform: translateX(0);
     }
 
-    &__button::before {
-      top: -26px;
-      left: -30px;
+    &__button {
+      transform: translateX(0);
+
+      &::before {
+        top: -26px;
+        left: -30px;
+      }
     }
   }
 }
