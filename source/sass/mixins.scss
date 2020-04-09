@@ -47,10 +47,13 @@
 }
 
 @mixin h3 {
-  @include h2;
-
+  font-family: $montserrat;
+  font-weight: 700;
   font-size: 28px;
-  line-height: 1.21;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+
+  color: $blue;
 }
 
 @mixin h3-mobile {
@@ -99,7 +102,7 @@
   @include text-big;
 
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.733;
 }
 
 @mixin text-regular-mobile {

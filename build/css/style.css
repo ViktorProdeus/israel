@@ -764,3 +764,209 @@ p {
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .about::after {
       background-image: url("../img/mobile/about__bg@2x.png"); } }
+
+.programs {
+  position: relative;
+  z-index: 1; }
+  .programs__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1171px;
+    margin: 150px auto;
+    padding: 55px 8.344% 50px 8.197%; }
+    .programs__container::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      width: 680px;
+      height: 426px;
+      top: 2px;
+      right: -97px;
+      background-image: url("../img/all/programs_bg@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+  .programs__inner {
+    margin-top: 65px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .programs__list-tabs {
+    margin: 0 64px 0 0;
+    padding: 0;
+    list-style: none;
+    width: 228px; }
+  .programs__item-tab {
+    width: 228px;
+    min-height: 68px;
+    padding: 16px 30px 16px 20px;
+    margin-bottom: 3px; }
+  .programs__item-tab--active {
+    position: relative;
+    background-image: url("../img/svg/tab-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    .programs__item-tab--active button {
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.07em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+      cursor: auto; }
+      .programs__item-tab--active button:hover {
+        color: white; }
+  .programs__item-tab--active .programs__btn--general::before, .programs__item-tab--active .programs__btn--general:hover::before {
+    background-image: url("../img/all/general-active-icon.png"); }
+  .programs__item-tab--active .programs__btn--stady::before, .programs__item-tab--active .programs__btn--stady:hover::before {
+    background-image: url("../img/all/stady-active-icon.png"); }
+  .programs__item-tab--active .programs__btn--internships::before, .programs__item-tab--active .programs__btn--internships:hover::before {
+    background-image: url("../img/all/internships-active-icon.png"); }
+  .programs__item-tab--active .programs__btn--volunteering::before, .programs__item-tab--active .programs__btn--volunteering:hover::before {
+    background-image: url("../img/all/volunteering-active-icon.png"); }
+  .programs__item-tab--active .programs__btn--religious::before, .programs__item-tab--active .programs__btn--religious:hover::before {
+    background-image: url("../img/all/religious-active-icon.png"); }
+  .programs__btn {
+    position: relative;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-family: "Firasans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: color 0.2s linear;
+    transition: color 0.2s linear; }
+    .programs__btn:hover {
+      color: #ffc341; }
+    .programs__btn:focus {
+      outline: none; }
+    .programs__btn::before {
+      display: block;
+      content: "";
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-transition: background-image 0.2s linear;
+      transition: background-image 0.2s linear; }
+  .programs__btn--general {
+    min-width: 102px; }
+    .programs__btn--general::before {
+      width: 28px;
+      height: 33px;
+      margin-left: 4px;
+      background-image: url("../img/all/general-icon.png"); }
+    .programs__btn--general:hover::before {
+      background-image: url("../img/all/general-hover-icon.png"); }
+  .programs__btn--stady {
+    min-width: 167px; }
+    .programs__btn--stady::before {
+      width: 36px;
+      height: 35px;
+      background-image: url("../img/all/stady-icon.png"); }
+    .programs__btn--stady:hover::before {
+      background-image: url("../img/all/stady-hover-icon.png"); }
+    .programs__btn--stady span {
+      margin-top: 3px; }
+  .programs__btn--internships {
+    min-width: 136px; }
+    .programs__btn--internships::before {
+      margin: 5px 0 0 2px;
+      width: 32px;
+      height: 25px;
+      background-image: url("../img/all/internships-icon.png"); }
+    .programs__btn--internships:hover::before {
+      background-image: url("../img/all/internships-hover-icon.png"); }
+    .programs__btn--internships span {
+      margin-top: 10px; }
+  .programs__btn--volunteering {
+    min-width: 151px; }
+    .programs__btn--volunteering::before {
+      margin: 5px 0 0 2px;
+      width: 32px;
+      height: 29px;
+      background-image: url("../img/all/volunteering-icon.png"); }
+    .programs__btn--volunteering:hover::before {
+      background-image: url("../img/all/volunteering-hover-icon.png"); }
+    .programs__btn--volunteering span {
+      margin-top: 5px; }
+  .programs__btn--religious {
+    min-width: 146px; }
+    .programs__btn--religious::before {
+      margin: 7px 0 0 6px;
+      width: 23px;
+      height: 25px;
+      background-image: url("../img/all/religious-icon.png"); }
+    .programs__btn--religious:hover::before {
+      background-image: url("../img/all/religious-hover-icon.png"); }
+    .programs__btn--religious span {
+      margin-top: 12px; }
+  .programs__list-content {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 554px; }
+  .programs__item-content {
+    display: none; }
+    .programs__item-content--active {
+      display: block; }
+    .programs__item-content h3 {
+      font-family: "Montserrat", "Arial", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      color: #1fc0fc;
+      margin: 17px 0 24px; }
+    .programs__item-content p {
+      font-family: "Firasans", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.733;
+      margin-bottom: 16px; }
+      .programs__item-content p:last-child {
+        max-width: 506px; }
+  @media (max-width: 1023px) {
+    .programs__container {
+      margin-top: 80px; }
+      .programs__container::after {
+        width: 580px;
+        height: 326px; }
+    .programs__list-tabs {
+      margin-right: 67px; }
+    .programs__item-content h3 {
+      font-family: "Montserrat", "Arial", sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      color: #1fc0fc;
+      font-size: 24px; }
+    .programs__item-content p {
+      font-family: "Firasans", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.733;
+      font-size: 14px;
+      line-height: 1.6; } }
