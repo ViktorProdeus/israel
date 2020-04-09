@@ -55,6 +55,7 @@
       background-image: url("../img/svg/mouse-button-stroke.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
+      background-size: cover;
       transition: background-image $animate;
     }
   }

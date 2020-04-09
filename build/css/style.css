@@ -443,6 +443,7 @@ p {
       background-image: url("../img/svg/mouse-button-stroke.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
+      background-size: cover;
       -webkit-transition: background-image 0.2s linear;
       transition: background-image 0.2s linear; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
