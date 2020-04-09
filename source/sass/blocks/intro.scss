@@ -26,7 +26,7 @@
     border: none;
     background-color: transparent;
 
-    @include bg-image("../img/all/mouse.png", cover);
+    @include bg-image("../img/all/mouse.png", contain);
 
     cursor: pointer;
 

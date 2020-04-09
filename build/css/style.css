@@ -421,11 +421,8 @@ p {
     background-color: transparent;
     background-image: url("../img/all/mouse.png");
     background-repeat: no-repeat;
-    border-radius: 40%;
-    -webkit-transition: -webkit-box-shadow 0.2s linear;
-    transition: -webkit-box-shadow 0.2s linear;
-    transition: box-shadow 0.2s linear;
-    transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
+    background-position: center;
+    background-size: contain;
     cursor: pointer; }
     .intro__button:hover::before, .intro__button:focus::before {
       background-image: url("../img/svg/mouse-button-stroke--hover.svg");
@@ -443,7 +440,6 @@ p {
       background-image: url("../img/svg/mouse-button-stroke.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
-      background-size: cover;
       -webkit-transition: background-image 0.2s linear;
       transition: background-image 0.2s linear; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
