@@ -25,8 +25,8 @@
     height: 26px;
     border: none;
     background-color: transparent;
-    background-image: url("../img/all/mouse.png");
-    background-repeat: no-repeat;
+
+    @include bg-image("../img/all/mouse.png", cover);
 
     cursor: pointer;
 
