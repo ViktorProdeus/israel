@@ -31,9 +31,14 @@
     transition: box-shadow $animate;
     cursor: pointer;
 
-    &:hover,
+    &:hover::before,
+    &:focus::before {
+      background-image: url("../img/svg/mouse-button-stroke--hover.svg");
+      outline: none;
+    }
+
     &:focus {
-      box-shadow: 0 0 8px 2px $yellow;
+      outline: none;
     }
 
     &::before {
@@ -50,6 +55,7 @@
       background-image: url("../img/svg/mouse-button-stroke.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
+      transition: background-image $animate;
     }
   }
 

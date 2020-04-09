@@ -427,9 +427,11 @@ p {
     transition: box-shadow 0.2s linear;
     transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
     cursor: pointer; }
-    .intro__button:hover, .intro__button:focus {
-      -webkit-box-shadow: 0 0 8px 2px #ffc341;
-              box-shadow: 0 0 8px 2px #ffc341; }
+    .intro__button:hover::before, .intro__button:focus::before {
+      background-image: url("../img/svg/mouse-button-stroke--hover.svg");
+      outline: none; }
+    .intro__button:focus {
+      outline: none; }
     .intro__button::before {
       position: absolute;
       z-index: 1;
@@ -440,7 +442,9 @@ p {
       height: 132px;
       background-image: url("../img/svg/mouse-button-stroke.svg");
       background-repeat: no-repeat;
-      background-position: 0 0; }
+      background-position: 0 0;
+      -webkit-transition: background-image 0.2s linear;
+      transition: background-image 0.2s linear; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .intro {
       background-image: url("../img/all/intro__bg@2x.jpg"); } }
