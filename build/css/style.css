@@ -767,7 +767,8 @@ p {
 
 .programs {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  overflow: hidden; }
   .programs__container {
     position: relative;
     z-index: 1;

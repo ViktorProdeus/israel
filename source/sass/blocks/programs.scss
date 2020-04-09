@@ -1,6 +1,7 @@
 .programs {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 
   &__container {
     position: relative;
