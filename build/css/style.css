@@ -420,6 +420,7 @@ p {
     border: none;
     background-color: transparent;
     background-image: url("../img/all/mouse.png");
+    background-repeat: no-repeat;
     border-radius: 40%;
     -webkit-transition: -webkit-box-shadow 0.2s linear;
     transition: -webkit-box-shadow 0.2s linear;
