@@ -23,6 +23,10 @@
       right: -97px;
 
       @include bg-image("../img/all/programs_bg@1x.png", contain);
+
+      @include retina {
+        background-image: url("../img/all/programs_bg@2x.png");
+      }
     }
   }
 
