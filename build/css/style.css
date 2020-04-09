@@ -423,6 +423,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    background-position: 0 0;
     cursor: pointer; }
     .intro__button:hover::before, .intro__button:focus::before {
       background-image: url("../img/svg/mouse-button-stroke--hover.svg");
