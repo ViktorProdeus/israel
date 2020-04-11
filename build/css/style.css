@@ -1415,9 +1415,12 @@ p {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .programs__list-wrapper {
+    margin: 0;
     width: auto;
-    height: auto; }
+    height: auto;
+    overflow: visible; }
   .programs__list-tabs {
+    display: block;
     margin: 0 64px 0 0;
     padding: 0;
     list-style: none; }
@@ -1425,7 +1428,9 @@ p {
     width: 228px;
     min-height: 68px;
     padding: 16px 30px 16px 20px;
-    margin-bottom: 3px; }
+    margin-bottom: 3px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
   .programs__item-tab--active {
     position: relative;
     background-image: url("../img/svg/tab-arrow.svg");
@@ -1537,6 +1542,8 @@ p {
       background-image: url("../img/all/religious-hover-icon.png"); }
     .programs__btn--religious span {
       margin-top: 12px; }
+  .programs__scrollbar {
+    display: none; }
   .programs__list-content {
     margin: 0;
     padding: 0;
@@ -1548,8 +1555,8 @@ p {
       display: block;
       -webkit-animation-name: zoomIn;
               animation-name: zoomIn;
-      -webkit-animation-duration: .4s;
-              animation-duration: .4s; }
+      -webkit-animation-duration: 0.4s;
+              animation-duration: 0.4s; }
     .programs__item-content h3 {
       font-family: "Montserrat", "Arial", sans-serif;
       font-weight: 700;
@@ -1619,9 +1626,14 @@ p {
           -ms-flex-direction: column;
               flex-direction: column; }
     .programs__list-wrapper {
+      margin: 0 auto;
       max-width: 100%;
-      min-height: 48px; }
+      min-height: 48px;
+      overflow: hidden; }
     .programs__list-tabs {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       width: 100%;
       height: 100%; }
     .programs__item-tab {
@@ -1635,7 +1647,9 @@ p {
               align-items: center;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box; }
       .programs__item-tab button {
         padding: 8px 14px 7px;
         width: 154px;
@@ -1678,6 +1692,8 @@ p {
       margin: 0 13px 0 0; }
     .programs__item-tab .programs__btn--internships {
       width: 152px; }
+    .programs__scrollbar {
+      display: block; }
     .programs__list-content {
       width: auto; }
     .programs__item-content h3 {
@@ -1691,7 +1707,7 @@ p {
   from {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3); }
+            transform: scale3d(0.3, 0.3, 0.3); }
   50% {
     opacity: 1; } }
 
@@ -1699,6 +1715,6 @@ p {
   from {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3); }
+            transform: scale3d(0.3, 0.3, 0.3); }
   50% {
     opacity: 1; } }

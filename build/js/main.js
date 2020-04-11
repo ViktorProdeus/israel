@@ -3,42 +3,33 @@
 (function () {
 
   var tabsContainer = document.querySelector('.programs__list-wrapper');
-  var tabsWrapper = document.querySelector('.programs__list-tabs');
-  var tabsSlide = document.querySelector('.programs__item-tab');
 
-  var removeClass = function (elem, className) {
-    elem.classList.remove(className);
-  };
 
-  var addClass = function (elem, className) {
-    elem.classList.add(className);
-  };
+  var breakpoint = window.matchMedia('(min-width:768px)');
+  var mySwiper;
 
-  var setServicesSlider = function () {
-    var breakpoint = window.matchMedia('(min-width:768px)');
-    var categoriesSlider;
+  var breakpointChecker = function () {
 
-    var breakpointChecker = function () {
-      if (breakpoint.matches === true) {
-        if (categoriesSlider) {
-          categoriesSlider.destroy(true, true);
-          removeClass(tabsContainer, 'swiper-container');
-          removeClass(tabsWrapper, 'swiper-wrapper');
-          removeClass(tabsSlide, 'swiper-slide');
-        }
-        return;
-      } else if (breakpoint.matches === false) {
-        addClass(tabsContainer, 'swiper-container');
-        addClass(tabsWrapper, 'swiper-wrapper');
-        addClass(tabsSlide, 'swiper-slide');
-        enableSwiper();
+    if (breakpoint.matches === true) {
+
+      if (mySwiper) {
+        mySwiper.destroy(true, true);
       }
-    };
 
-    var enableSwiper = function () {
-      categoriesSlider = new Swiper(tabsContainer, {
+      return;
 
-        centeredSlides: true,
+    } else if (breakpoint.matches === false) {
+
+      enableSwiper();
+    }
+  };
+
+
+  var enableSwiper = function () {
+
+    if (tabsContainer) {
+      mySwiper = new window.Swiper(tabsContainer, {
+
         slidesPerView: 'auto',
         freeMode: true,
 
@@ -46,16 +37,13 @@
           el: '.swiper-scrollbar',
           hide: true
         },
-      });
-    };
 
-    breakpoint.addListener(breakpointChecker);
-    breakpointChecker();
+      });
+    }
   };
 
-  if (tabsContainer) {
-    setServicesSlider();
-  }
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 
 
 })();
