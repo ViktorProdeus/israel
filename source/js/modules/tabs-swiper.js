@@ -21,13 +21,14 @@
     var breakpointChecker = function () {
       if (breakpoint.matches === true) {
         if (categoriesSlider) {
-          categoriesSlider.destroy(true, true);
           removeClass(tabsContainer, 'swiper-container');
           removeClass(tabsWrapper, 'swiper-wrapper');
           removeClass(tabsSlide, 'swiper-slide');
+          categoriesSlider.destroy(true, true);
         }
         return;
-      } else if (breakpoint.matches === false) {
+
+      } else if (breakpoint.matches === false && breakpoint.matches) {
         addClass(tabsContainer, 'swiper-container');
         addClass(tabsWrapper, 'swiper-wrapper');
         addClass(tabsSlide, 'swiper-slide');
