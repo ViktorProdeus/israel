@@ -73,37 +73,42 @@
         <h2>Программы</h2>
 
       <div class="programs__inner">
-        <ul class="programs__list-tabs">
-          <li class="programs__item-tab">
-            <button class="programs__btn programs__btn--general" type="button" aria-label="переключить вкладку">
-              <span>Общие</span>
-            </button>
-          </li>
 
-          <li class="programs__item-tab programs__item-tab--active">
-            <button class="programs__btn programs__btn--stady" type="button" aria-label="переключить вкладку">
-              <span>Академические</span>
-            </button>
-          </li>
+        <div class="swiper-container programs__list-wrapper">
+          <ul class="programs__list-tabs swiper-wrapper">
+            <li class="programs__item-tab swiper-slide">
+              <button class="programs__btn programs__btn--general" type="button" aria-label="переключить вкладку">
+                <span>Общие</span>
+              </button>
+            </li>
 
-          <li class="programs__item-tab">
-            <button class="programs__btn programs__btn--internships" type="button" aria-label="переключить вкладку">
-              <span>Стажировки</span>
-            </button>
-          </li>
+            <li class="programs__item-tab swiper-slide programs__item-tab--active">
+              <button class="programs__btn programs__btn--stady" type="button" aria-label="переключить вкладку">
+                <span>Академические</span>
+              </button>
+            </li>
 
-          <li class="programs__item-tab">
-            <button class="programs__btn programs__btn--volunteering" type="button" aria-label="переключить вкладку">
-              <span>Волонтёрство</span>
-            </button>
-          </li>
+            <li class="programs__item-tab swiper-slide">
+              <button class="programs__btn programs__btn--internships" type="button" aria-label="переключить вкладку">
+                <span>Стажировки</span>
+              </button>
+            </li>
 
-          <li class="programs__item-tab">
-            <button class="programs__btn programs__btn--religious" type="button" aria-label="переключить вкладку">
-              <span>Религиозные</span>
-            </button>
-          </li>
-        </ul>
+            <li class="programs__item-tab swiper-slide">
+              <button class="programs__btn programs__btn--volunteering" type="button" aria-label="переключить вкладку">
+                <span>Волонтёрство</span>
+              </button>
+            </li>
+
+            <li class="programs__item-tab swiper-slide">
+              <button class="programs__btn programs__btn--religious" type="button" aria-label="переключить вкладку">
+                <span>Религиозные</span>
+              </button>
+            </li>
+          </ul>
+
+          <div class="swiper-scrollbar"></div>
+        </div>
 
         <ul class="programs__list-content">
           <li class="programs__item-content">
@@ -195,8 +200,8 @@
     <!-- подвал сайта -->
   </footer>
 
-  <!-- <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script> -->
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

@@ -38,12 +38,16 @@
     justify-content: flex-start;
   }
 
+  &__list-wrapper {
+    width: auto;
+    height: auto;
+  }
+
   &__list-tabs {
     margin: 0 64px 0 0;
     padding: 0;
 
     list-style: none;
-    width: 228px;
   }
 
   &__item-tab {
@@ -243,6 +247,8 @@
 
     &--active {
       display: block;
+      animation-name: zoomIn;
+      animation-duration: 0.4s;
     }
 
     h3 {
@@ -284,5 +290,160 @@
         @include text-regular-mobile;
       }
     }
+  }
+
+  @media (max-width: $mobile--max) {
+    &__container {
+      margin-top: 30px;
+      padding: 55px 16px 50px;
+
+      &::after {
+        width: 296px;
+        height: 201px;
+        top: 170px;
+        right: -1px;
+
+        @include bg-image("../img/mobile/programs_bg@1x.png", contain);
+
+        @include retina {
+          background-image: url("../img/mobile/programs_bg@2x.png");
+        }
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    &__inner {
+      margin-top: 4px;
+      flex-direction: column;
+    }
+
+    &__list-wrapper {
+      max-width: 100%;
+      min-height: 48px;
+    }
+
+    &__list-tabs {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__item-tab {
+      padding: 0;
+      width: 182px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      button {
+        padding: 8px 14px 7px;
+        width: 154px;
+        height: 35px;
+      }
+    }
+
+    &__btn {
+      opacity: 0.4;
+      transition: opacity $animate, color $animate, background $animate;
+
+      &:hover {
+        opacity: 1;
+        color: $yellow;
+      }
+    }
+
+    &__item-tab--active {
+      background-image: none;
+      padding: 0;
+    }
+
+    &__item-tab--active &__btn {
+      opacity: 1;
+      border-radius: 40px;
+      background-image: $gradient--active;
+    }
+
+    &__item-tab &__btn--general {
+      margin-left: 50px;
+      width: 132px;
+    }
+
+    &__btn--stady {
+      min-width: 154px;
+
+      &::before {
+        background-size: 32px 31px;
+        background-position: -2px 0;
+      }
+    }
+
+    &__btn--internships {
+      &::before {
+        margin: 0;
+        background-size: 28px 23px;
+        background-position: 0 0;
+      }
+
+      span {
+        margin: 0;
+      }
+    }
+
+    &__btn--volunteering {
+      &::before {
+        margin: 0;
+      }
+
+      span {
+        margin: 0;
+      }
+    }
+
+    &__btn--religious {
+      &::before {
+        margin-top: 0;
+      }
+
+      span {
+        margin: 0 13px 0 0;
+      }
+    }
+
+    &__item-tab &__btn--internships {
+      width: 152px;
+    }
+
+    &__list-content {
+      width: auto;
+    }
+
+    &__item-content {
+      h3 {
+        margin-top: 21px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        min-width: 90%;
+        margin: 0 3px 12px 0;
+      }
+    }
+  }
+}
+
+// animation for tabs
+//-----------------------
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
   }
 }
