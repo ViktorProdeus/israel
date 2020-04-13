@@ -8,7 +8,7 @@
     z-index: 1;
 
     max-width: 1171px;
-    margin: 150px auto;
+    margin: 150px auto 0;
     padding: 55px 8.344% 50px 8.197%;
 
 
@@ -305,7 +305,7 @@
   @media (max-width: $mobile--max) {
     &__container {
       margin-top: 30px;
-      padding: 55px 16px 50px;
+      padding: 55px 16px 25px;
 
       &::after {
         width: 296px;
@@ -363,7 +363,7 @@
 
     &__btn {
       opacity: 0.4;
-      transition: opacity $animate, color $animate, background $animate;
+      transition: all $animate;
 
       &:hover {
         opacity: 1;

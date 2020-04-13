@@ -1,0 +1,24 @@
+.btn {
+  padding: 21px 40px 18px;
+  min-width: 216px;
+
+  @include text-btn;
+
+  appearance: none;
+  border: none;
+  border-radius: 80px;
+
+  background-image: $gradient--active;
+  transition: background-color $animate;
+
+  cursor: pointer;
+
+  &:hover {
+    background-image: $gradient--hover;
+  }
+
+  &:focus {
+    outline: none;
+    background-image: $gradient--click;
+  }
+}

@@ -7,6 +7,7 @@
 
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
     @content;
   }
 }
@@ -122,12 +123,20 @@
   font-family: $firasans;
 
   font-weight: 500;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.18;
+
+  font-variant: small-caps;
+  text-transform: uppercase;
+  color: rgba($black, 0.5);
 }
 
-@mixin text-form-btn {
+@mixin text-btn {
   @include text-form-placeholder;
+
+  letter-spacing: 0.02em;
+  color: white;
+  text-shadow: $shadow--text;
 }
 
 @mixin text-promo {
