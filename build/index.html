@@ -28,7 +28,7 @@
           <a class="main-header__phone" href="tel:+(972)2–621–6581" aria-label="телефон компании">+ (972) 2 – 621 –
             6581</a>
 
-          <a href="#" class="main-header__order">
+          <a href="#" class="main-header__order open-order-js">
             заказать звонок
           </a>
         </div>
@@ -207,7 +207,7 @@
       </div>
     </section>
 
-    <section class="want">
+    <section class="want form-js">
       <div class="want__wrapper">
         <h2>Хочу поехать!</h2>
 
@@ -223,7 +223,7 @@
           <div class="want__wrapp-elements">
             <input type="tel" name="want-feedback-phone" id="want-feedback-phone" placeholder="Телефон" minlength="16" maxlength="16" required="" autocomplete="off">
 
-            <button class="btn want__submit" type="submit">перезвоните мне</button>
+            <button class="btn want__submit submit-js" type="submit">перезвоните мне</button>
           </div>
 
         </form>
@@ -279,6 +279,66 @@
   <footer class="main-footer">
     <!-- подвал сайта -->
   </footer>
+
+
+
+  <!-- попап окна -->
+
+  <div class="popup popup--order form-js">
+    <div class="popup__inner">
+
+      <button class="popup__close" type="button" aria-label="закрыть попап">&times;</button>
+
+      <form method="post" action="https://echo.htmlacademy.ru">
+
+        <h3>Заказать звонок</h3>
+
+        <p>
+          Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение рабочего дня и&nbsp;обязательно
+          поможем найти ответ на&nbsp;ваш вопрос!
+        </p>
+
+        <div class="popup__name">
+          <label for="popup-name"><span class="visually-hidden">Введите ваше имя</span></label>
+          <input type="text" name="popup-name" id="popup-name" placeholder="Имя" minlength="2" maxlength="24" required="" autocomplete="off">
+        </div>
+
+        <div class="popup__phone">
+          <label for="popup-phone"><span class="visually-hidden">Введите ваш телефон</span></label>
+          <input type="tel" name="popup-phone" id="popup-phone" placeholder="Телефон" minlength="16" maxlength="16" required="" autocomplete="off">
+        </div>
+
+        <button class="btn popup__btn submit-js" type="submit">перезвоните мне</button>
+
+        <div class="popup__checkbox">
+          <input type="checkbox" name="popup-checkbox" id="popup-checkbox">
+
+          <label for="popup-checkbox">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="popup popup--success">
+    <div class="popup__inner">
+
+      <button class="popup__close" type="button" aria-label="закрыть попап">&times;</button>
+
+      <div class="popup__success-content">
+        <span class="popup__success-icon"></span>
+
+        <h3>Заявка принята</h3>
+
+        <p>
+          Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
+        </p>
+
+        <button class="btn popup__btn" type="button">понятно</button>
+      </div>
+
+    </div>
+  </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

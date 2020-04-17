@@ -1,8 +1,54 @@
 .site-wrapper {
+  position: relative;
   min-height: 100vh;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
+}
+
+.form-js {
+  .active {
+    border: 2px solid $yellow;
+    border-image: $gradient--active 27 / 27px / stretch;
+  }
+
+  .correct {
+    border-color: $correct-color;
+  }
+
+  .error {
+    border-color: $error-color;
+  }
+
+  input {
+    max-width: 360px;
+    width: 100%;
+    padding: 20px 38px 17px;
+
+    appearance: none;
+    border: 2px solid $default-color;
+    border-radius: 80px;
+
+    z-index: 2;
+    transition: border-color $animate;
+
+    &::placeholder {
+      @include text-form-placeholder;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.body-fixed {
+  position: fixed;
+  height: 100vh;
+  overflow-y: hidden;
+  left: 0;
+  right: 0;
 }
 
 

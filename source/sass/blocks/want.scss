@@ -64,41 +64,12 @@
     display: flex;
     justify-content: flex-start;
 
-    .active {
-      border: 2px solid $yellow;
-      border-image: $gradient--active 27 / 27px / stretch;
-    }
-
-    .correct {
-      border-color: $correct-color;
-    }
-
-    .error {
-      border-color: $error-color;
-    }
-
     input {
       width: 285px;
+      // padding: 20px 38px 17px;
 
-      padding: 20px 38px 17px;
-
-      appearance: none;
-      border: 2px solid $default-color;
-      border-right-color: transparent;
-      border-radius: 80px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-
-      z-index: 2;
-      transition: border-color $animate;
-
-      &::placeholder {
-        @include text-form-placeholder;
-      }
-
-      &:focus {
-        outline: none;
-      }
     }
   }
 
