@@ -55,13 +55,14 @@
   var itemsContent = document.querySelectorAll('.programs__item-content');
   var activeClass = 'programs__item-content--active';
 
+
   var removeClass = function (elem, className) {
-    Array.prototype.forEach.call(elem, function (i) {
+    elem.forEach(function (i) {
       i.classList.remove(className);
     });
   };
 
-  Array.prototype.forEach.call(tabs, function (tab, i) {
+  tabs.forEach(function (tab, i) {
     tab.addEventListener('click', function (evt) {
       evt.preventDefault();
 

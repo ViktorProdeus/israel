@@ -947,11 +947,6 @@ button.swiper-pagination-bullet {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.form-js .active {
-  border: 2px solid #ffc341;
-  -o-border-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%) 1/px/stretch;
-     border-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%) 1/px/stretch; }
-
 .form-js .correct {
   border-color: #484848; }
 
@@ -1010,13 +1005,11 @@ button.swiper-pagination-bullet {
     font-variant: small-caps;
     text-transform: uppercase;
     color: rgba(72, 72, 72, 0.5); }
-  .form-js input:focus {
-    outline: none; }
 
 .body-fixed {
   position: fixed;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: scroll;
   left: 0;
   right: 0; }
 
@@ -1065,6 +1058,10 @@ h4,
 p {
   margin: 0;
   padding: 0; }
+
+input:focus {
+  outline: none;
+  border: 2px solid #ffc341; }
 
 .container {
   padding: 0 17px 0 12px;
@@ -1974,8 +1971,7 @@ p {
         .want__wrapp-elements input {
           margin-bottom: 9px;
           border-top-right-radius: 80px;
-          border-bottom-right-radius: 80px;
-          border-right-color: #e3e3e3; }
+          border-bottom-right-radius: 80px; }
       .want__submit {
         margin-left: 11px;
         width: 264px; } }
@@ -2318,7 +2314,8 @@ p {
       position: relative;
       padding-left: 24px;
       display: block;
-      color: rgba(72, 72, 72, 0.74); }
+      color: rgba(72, 72, 72, 0.74);
+      cursor: pointer; }
       .popup__checkbox label::before {
         position: absolute;
         z-index: 1;

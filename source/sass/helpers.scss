@@ -8,11 +8,6 @@
 }
 
 .form-js {
-  .active {
-    border: 2px solid $yellow;
-    border-image: $gradient--active 27 / 27px / stretch;
-  }
-
   .correct {
     border-color: $correct-color;
   }
@@ -36,21 +31,16 @@
     &::placeholder {
       @include text-form-placeholder;
     }
-
-    &:focus {
-      outline: none;
-    }
   }
 }
 
 .body-fixed {
   position: fixed;
   height: 100vh;
-  overflow-y: hidden;
+  overflow-y: scroll;
   left: 0;
   right: 0;
 }
-
 
 // @media (min-width: $desktop-min) {
 

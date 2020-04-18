@@ -73,7 +73,6 @@
     }
 
     &:focus {
-      // outline: none;
       transform: scale(1.2);
     }
   }
@@ -111,6 +110,7 @@
 
       display: block;
       color: rgba($black, 0.74);
+      cursor: pointer;
 
       &::before {
         position: absolute;
@@ -124,13 +124,12 @@
 
         @include bg-image("../img/svg/checkbox-off.svg", contain);
       }
-
     }
 
     input {
       display: none;
 
-      &:checked+label::after {
+      &:checked + label::after {
         position: absolute;
         z-index: 1;
 
