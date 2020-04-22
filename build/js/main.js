@@ -1,6 +1,70 @@
 'use strict';
 
 (function () {
+
+  var izraelSlider = document.querySelector('.izrael__slider');
+
+
+  var breakpoint = window.matchMedia('(min-width:1024px)');
+  var mySwiper;
+
+  var breakpointChecker = function () {
+
+    if (breakpoint.matches === true) {
+
+      if (mySwiper) {
+        mySwiper.destroy(true, true);
+      }
+
+      return;
+
+    } else if (breakpoint.matches === false) {
+
+      enableSwiper();
+    }
+  };
+
+
+  var enableSwiper = function () {
+
+    if (izraelSlider) {
+      mySwiper = new window.Swiper(izraelSlider, {
+
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        centeredSlides: true,
+
+        pagination: {
+          el: '.izrael__pagination',
+          clickable: true,
+        },
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 30
+          },
+
+          768: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+          }
+        }
+
+      });
+    }
+  };
+
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
+
+
+})();
+
+'use strict';
+
+(function () {
   var userPhoneBlockWant = document.querySelector('.want input');
 
   var userPhoneBlockPopup = document.querySelector('.popup__phone input');
@@ -21,11 +85,12 @@
 
   var body = document.querySelector('body');
   var popups = document.querySelectorAll('.popup');
-  window.popupOrder = document.querySelector('.popup--order');
-  window.popupSuccess = document.querySelector('.popup--success');
   var buttonsOrder = document.querySelectorAll('.open-order-js');
   var buttonsClose = document.querySelectorAll('.popup__close');
   var buttonPopup = document.querySelector('.popup__btn-js');
+
+  window.popupOrder = document.querySelector('.popup--order');
+  window.popupSuccess = document.querySelector('.popup--success');
 
   var getScrollbarWidth = function () {
     var outer = document.createElement('div');
@@ -236,7 +301,6 @@
 
 (function () {
 
-  // var forms = document.querySelectorAll('.form-js form');
   var inputs = document.querySelectorAll('.form-js input');
   var nameInputs = document.querySelectorAll('.form-js input[type=text]');
   var phoneInputs = document.querySelectorAll('.form-js input[type=tel]');

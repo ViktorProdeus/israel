@@ -1069,8 +1069,14 @@ input:focus {
   min-width: 320px;
   width: 100%;
   margin: 0 auto; }
+  .container--izrael {
+    padding: 0 13px 0 6px; }
+  @media (max-width: 1023px) {
+    .container--izrael {
+      padding: 0 17px 0 12px; } }
   @media (max-width: 767px) {
     .container {
+      max-width: 768px;
       padding: 0 16px; } }
 
 .btn {
@@ -2388,3 +2394,221 @@ input:focus {
         text-align: center; }
     .popup__success-content {
       margin-top: 150px; } }
+
+.izrael {
+  margin: -241px auto 0;
+  padding-top: 45px;
+  max-width: 1566px;
+  width: 100%;
+  min-height: 950px;
+  background-image: url("../img/all/izrael__bg@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .izrael {
+      background-image: url("../img/all/izrael__bg@2x.png"); } }
+  .izrael h2 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 23px;
+    margin-left: 3px; }
+  .izrael p {
+    max-width: 720px;
+    padding-right: 9px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.87; }
+  .izrael__slider {
+    overflow: visible; }
+  .izrael__list {
+    margin: -20px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: minmax(auto, 482px) minmax(auto, 211px) minmax(auto, 200px) minmax(auto, 211px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    grid-column-gap: 6px;
+    grid-row-gap: 20px;
+    grid-template-areas: "big foto2 foto3 foto3" "big foto4 foto4 foto5"; }
+  .izrael__item {
+    position: relative;
+    z-index: 1;
+    height: auto; }
+    .izrael__item img {
+      display: none; }
+    .izrael__item p {
+      text-align: left;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+      font-family: "Raleway", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 21px;
+      line-height: 25px; }
+    .izrael__item[data-photo="1"] {
+      grid-area: big;
+      max-width: 482px;
+      min-height: 732px;
+      background-image: url("../img/all/1img@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-position: 90% 0; }
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        .izrael__item[data-photo="1"] {
+          background-image: url("../img/all/1img@2x.png"); } }
+      .izrael__item[data-photo="1"] p {
+        max-width: 320px;
+        margin-top: 650px;
+        margin-left: 40px; }
+    .izrael__item[data-photo="2"] {
+      grid-area: foto2;
+      margin-top: 54px;
+      max-width: 211px;
+      min-height: 318px;
+      background-image: url("../img/all/2img@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        .izrael__item[data-photo="2"] {
+          background-image: url("../img/all/2img@2x.png"); } }
+      .izrael__item[data-photo="2"] p {
+        max-width: 120px;
+        margin-top: 237px;
+        margin-left: 24px; }
+    .izrael__item[data-photo="3"] {
+      grid-area: foto3;
+      margin-left: 13px;
+      max-width: 411px;
+      min-height: 318px;
+      background-image: url("../img/all/3img@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        .izrael__item[data-photo="3"] {
+          background-image: url("../img/all/3img@2x.png"); } }
+      .izrael__item[data-photo="3"] p {
+        max-width: 270px;
+        margin-top: 237px;
+        margin-left: 32px; }
+    .izrael__item[data-photo="4"] {
+      grid-area: foto4;
+      max-width: 411px;
+      min-height: 318px;
+      background-image: url("../img/all/4img@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        .izrael__item[data-photo="4"] {
+          background-image: url("../img/all/4img@2x.png"); } }
+      .izrael__item[data-photo="4"] p {
+        max-width: 355px;
+        margin-top: 237px;
+        margin-left: 32px; }
+    .izrael__item[data-photo="5"] {
+      grid-area: foto5;
+      max-width: 211px;
+      min-height: 318px;
+      background-image: url("../img/all/5img@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        .izrael__item[data-photo="5"] {
+          background-image: url("../img/all/5img@2x.png"); } }
+      .izrael__item[data-photo="5"] p {
+        max-width: 100px;
+        margin-top: 237px;
+        margin-left: 21px; }
+  .izrael__pagination {
+    display: none; }
+  @media (max-width: 1023px) {
+    .izrael {
+      margin: 35px auto 0;
+      min-height: auto;
+      background-image: none; }
+      .izrael p {
+        max-width: 100%;
+        padding-right: 12px;
+        margin: 0 auto;
+        text-align: left;
+        font-family: "Firasans", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.7;
+        font-size: 16px;
+        line-height: 1.6;
+        opacity: 0.87; }
+      .izrael__slider {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin-top: 0;
+        padding: 47px 0 40px; }
+      .izrael__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: auto; }
+      .izrael__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        position: relative;
+        width: 288px;
+        height: 100%;
+        background-image: none; }
+        .izrael__item img {
+          position: absolute;
+          display: block; }
+        .izrael__item[data-photo="1"], .izrael__item[data-photo="2"], .izrael__item[data-photo="3"], .izrael__item[data-photo="4"], .izrael__item[data-photo="5"] {
+          margin: 0;
+          max-width: 288px;
+          min-height: 400px;
+          width: 288px;
+          background-image: none; }
+          .izrael__item[data-photo="1"] p, .izrael__item[data-photo="2"] p, .izrael__item[data-photo="3"] p, .izrael__item[data-photo="4"] p, .izrael__item[data-photo="5"] p {
+            font-family: "Raleway", "Arial", sans-serif;
+            font-weight: 900;
+            font-size: 200px;
+            line-height: 1.7;
+            letter-spacing: 0.055em;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 21px;
+            line-height: 1.19;
+            font-size: 18px;
+            line-height: 1.17;
+            text-transform: none;
+            text-align: center;
+            max-width: 100%;
+            margin: 290px 0 0;
+            letter-spacing: -0.01em;
+            padding: 0 20px; }
+        .izrael__item[data-photo="2"] p, .izrael__item[data-photo="5"] p {
+          margin-top: 350px; }
+      .izrael__pagination {
+        display: block;
+        margin-top: 50px; }
+        .izrael__pagination .swiper-pagination-bullet-active {
+          background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
+          .izrael__pagination .swiper-pagination-bullet-active:focus {
+            outline: none; } }
