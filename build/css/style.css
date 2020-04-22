@@ -2614,3 +2614,93 @@ input:focus {
   @media (max-width: 767px) {
     .izrael {
       margin: 35px auto 0; } }
+
+.promo {
+  margin: 96px auto 0;
+  max-width: 1566px;
+  min-height: 583px;
+  background-image: url("../img/all/promo__bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../img/all/promo__bg@2x.jpg"); } }
+  .promo__inner {
+    padding: 123px 20px 0 0;
+    margin-left: auto;
+    max-width: 456px; }
+    .promo__inner h2 {
+      margin-bottom: 22px; }
+    .promo__inner p {
+      font-family: "Firasans", "Arial", sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.7;
+      margin-left: 3px;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
+  .promo__link {
+    position: relative;
+    margin-top: 47px;
+    padding: 23px 25px 19px 72px;
+    display: block;
+    max-width: 230px; }
+    .promo__link::before {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      width: 24px;
+      height: 24px;
+      top: 34%;
+      left: 19%;
+      background-image: url("../img/svg/insta.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat; }
+  @media (max-width: 1023px) {
+    .promo {
+      margin: 10px auto 0; }
+      .promo__inner {
+        padding: 0; }
+        .promo__inner h2 {
+          margin-bottom: 183px;
+          padding-top: 50px; } }
+  @media (max-width: 320px) {
+    .promo {
+      margin: 34px auto 0;
+      min-width: 320px;
+      min-height: 272px;
+      background-image: url("../img/mobile/promo__bg@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; } }
+  @media (max-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 320px) and (min-resolution: 144dpi), (max-width: 320px) and (min-resolution: 1.5dppx) {
+    .promo {
+      background-image: url("../img/mobile/promo__bg@2x.jpg"); } }
+  @media (max-width: 320px) {
+      .promo__inner {
+        padding: 0; }
+        .promo__inner h2 {
+          font-family: "Montserrat", "Arial", sans-serif;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 1.22;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+          padding-top: 32px;
+          margin-bottom: 95px; }
+        .promo__inner p {
+          font-family: "Firasans", "Arial", sans-serif;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 1.7;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-left: 7px; }
+      .promo__link {
+        margin: 58px auto 0;
+        padding-left: 87px;
+        max-width: 262px; }
+        .promo__link::before {
+          top: 33%;
+          left: 22%; } }

@@ -41,6 +41,7 @@ $shadow--bubble:                    0 3px 12px rgba(#000000, 0.1);
 // Media queries
 //---------------------------------
 
+$mobile--only:                       320px !default;
 $mobile--max:                        767px !default;
 $tablet--max:                       1023px !default;
 $desktop--min:                      1024px !default;
