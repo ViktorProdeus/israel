@@ -31,9 +31,6 @@
       mySwiper = new window.Swiper(izraelSlider, {
 
         loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 40,
-        centeredSlides: true,
 
         pagination: {
           el: '.izrael__pagination',
@@ -43,12 +40,12 @@
         breakpoints: {
           320: {
             slidesPerView: 1,
-            spaceBetween: 30
+            slidesPerGroup: 1,
           },
 
           768: {
-            slidesPerView: 'auto',
-            spaceBetween: 40,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
           }
         }
 
