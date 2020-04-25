@@ -133,7 +133,7 @@
     var inputName = document.querySelector('.form-js [name=popup-name]');
     var inputphone = document.querySelector('.form-js [name=popup-phone]');
 
-    buttons.forEach(function (i) {
+    Array.prototype.forEach.call(buttons, function (i) {
       i.addEventListener('click', function (evt) {
         evt.preventDefault();
 
@@ -148,7 +148,7 @@
   };
 
   var hideElements = function (buttons, popup) {
-    buttons.forEach(function (i) {
+    Array.prototype.forEach.call(buttons, function (i) {
       i.addEventListener('click', function (evt) {
         evt.preventDefault();
 
@@ -162,7 +162,7 @@
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      popups.forEach(function (element) {
+      Array.prototype.forEach.call(popups, function (element) {
 
         if (element.classList.contains('popup--show')) {
 
@@ -173,7 +173,7 @@
     }
   });
 
-  popups.forEach(function (element) {
+  Array.prototype.forEach.call(popups, function (element) {
     element.addEventListener('click', function (evt) {
       if (evt.target === element || evt.target === buttonPopup) {
 
@@ -271,12 +271,12 @@
 
 
   var removeClass = function (elem, className) {
-    elem.forEach(function (i) {
+    Array.prototype.forEach.call(elem, function (i) {
       i.classList.remove(className);
     });
   };
 
-  tabs.forEach(function (tab, i) {
+  Array.prototype.forEach.call(tabs, function (tab, i) {
     tab.addEventListener('click', function (evt) {
       evt.preventDefault();
 
@@ -301,19 +301,12 @@
   var inputs = document.querySelectorAll('.form-js input');
   var nameInputs = document.querySelectorAll('.form-js input[type=text]');
   var phoneInputs = document.querySelectorAll('.form-js input[type=tel]');
+
+  var checkbox = document.querySelector('.popup__checkbox input');
   var submitBtns = document.querySelectorAll('.submit-js');
 
-
-  window.activeForEachNodeListForIE = function () {
-    if (typeof NodeList.prototype.forEach !== 'function') {
-      NodeList.prototype.forEach = Array.prototype.forEach;
-    }
-  };
-
-  window.activeForEachNodeListForIE();
-
   var inputsSuccessHandler = function () {
-    phoneInputs.forEach(function (i) {
+    Array.prototype.forEach.call(phoneInputs, function (i) {
       if (i.value.length === 16) {
         i.classList.add('correct');
       } else {
@@ -321,8 +314,8 @@
       }
     });
 
-    nameInputs.forEach(function (i) {
-      if (i.value.length > 1) {
+    Array.prototype.forEach.call(nameInputs, function (i) {
+      if (i.value.length > 0) {
         i.classList.add('correct');
       } else {
         i.classList.remove('correct');
@@ -330,7 +323,7 @@
     });
   };
 
-  inputs.forEach(function (i) {
+  Array.prototype.forEach.call(inputs, function (i) {
     i.addEventListener('input', inputsSuccessHandler);
   });
 
@@ -346,29 +339,38 @@
     removeStyle(evt);
   };
 
+  var checkboxChangeHandler = function () {
+    checkbox.parentNode.classList.remove('popup__checkbox--error');
+  };
+
   var addInputsListener = function () {
-    nameInputs.forEach(function (i) {
+    checkbox.addEventListener('change', checkboxChangeHandler);
+
+    Array.prototype.forEach.call(nameInputs, function (i) {
       i.addEventListener('input', nameInputsChangeHandler);
     });
 
-    phoneInputs.forEach(function (i) {
+    Array.prototype.forEach.call(phoneInputs, function (i) {
       i.addEventListener('input', phoneInputsChangeHandler);
     });
   };
 
   var removeInputsListener = function () {
-    nameInputs.forEach(function (i) {
+    checkbox.removeEventListener('change', checkboxChangeHandler);
+
+    Array.prototype.forEach.call(nameInputs, function (i) {
       i.removeEventListener('input', nameInputsChangeHandler);
     });
 
-    phoneInputs.forEach(function (i) {
+    Array.prototype.forEach.call(phoneInputs, function (i) {
       i.removeEventListener('input', phoneInputsChangeHandler);
     });
   };
 
+
   var checkNameInputsValidity = function (el) {
     var flag = true;
-    if (el.value === '' || el.value.length < 2) {
+    if (el.value === '' || el.value.length < 1) {
       flag = false;
     }
     return flag;
@@ -379,6 +381,16 @@
     if (el.value === '' || el.value.length < 16) {
       flag = false;
     }
+    return flag;
+  };
+
+  var checkBoxValidity = function (el) {
+    var flag = true;
+
+    if (!el.checked) {
+      flag = false;
+    }
+
     return flag;
   };
 
@@ -393,6 +405,13 @@
       el.classList.add('error');
     }
   };
+
+  var checkBoxValidate = function (el) {
+    if (!checkBoxValidity(el)) {
+      el.parentNode.classList.add('popup__checkbox--error');
+    }
+  };
+
 
   var returnParent = function (el, cssClass) {
     var element = el;
@@ -414,7 +433,7 @@
   };
 
   if (submitBtns) {
-    submitBtns.forEach(function (el) {
+    Array.prototype.forEach.call(submitBtns, function (el) {
       var btn = el;
 
       btn.addEventListener('click', function (evt) {
@@ -442,17 +461,17 @@
           }
 
         } else {
+          checkBoxValidate(checkbox);
           checkPhoneInputValidity(phoneInput);
           checkNameInputValidity(textInput);
 
-          if (checkNameInputsValidity(textInput) && checkPhoneInputsValidity(phoneInput)) {
+          if (checkNameInputsValidity(textInput) && checkPhoneInputsValidity(phoneInput) && checkBoxValidity(checkbox)) {
             removeInputsListener();
             setTimeout(function () {
               form.reset();
               phoneInput.classList.remove('correct');
               textInput.classList.remove('correct');
               showSuccessMessages();
-              localStorage.clear();
             }, 500);
           }
         }

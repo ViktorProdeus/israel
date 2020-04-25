@@ -69,7 +69,7 @@
     </section>
 
     <section class="programs">
-      <div class="programs__container">
+      <div class="container">
         <h2>Программы</h2>
 
         <div class="programs__inner">
@@ -234,7 +234,7 @@
     </section>
 
     <section class="how">
-      <div class="container">
+      <div class="container how__wrapper">
         <div class="how__inner">
           <h2>Как поехать</h2>
 
@@ -270,10 +270,10 @@
             </li>
           </ul>
 
-          <strong>
+          <span>
             Если вы&nbsp;не&nbsp;подходите по&nbsp;этим правилам, вы&nbsp;всё равно можете принять участие&nbsp;в
             программе &laquo;Маса&raquo;, оплатив её&nbsp;полную стоимость.
-          </strong>
+          </span>
         </div>
       </div>
     </section>
@@ -333,12 +333,13 @@
     </section>
 
     <section class="promo">
-      <div class="container">
+      <div class="container promo__container">
         <div class="promo__inner">
           <h2>#masaisrael</h2>
 
           <p>
-            Познакомьтесь с&nbsp;программой от&nbsp;первого лица! Многие участники ведут блоги и&nbsp;фотодневники о&nbsp;жизни, учёбе и&nbsp;путешествиях в&nbsp;Израиле.
+            Познакомьтесь с&nbsp;программой от&nbsp;первого лица! Многие участники ведут блоги и&nbsp;фотодневники
+            о&nbsp;жизни, учёбе и&nbsp;путешествиях в&nbsp;Израиле.
           </p>
 
           <a href="#" class="btn promo__link">
@@ -358,61 +359,69 @@
   <!-- попап окна -->
 
   <div class="popup popup--order form-js">
-    <div class="popup__inner">
+    <div class="popup__overlay"></div>
 
-      <button class="popup__close" type="button" aria-label="закрыть попап">&times;</button>
+    <div class="popup__wrapper">
+      <div class="popup__inner">
 
-      <form method="post" action="https://echo.htmlacademy.ru">
+        <button class="popup__close" type="button" aria-label="закрыть попап">&times;</button>
 
-        <h3>Заказать звонок</h3>
+        <form method="post" action="https://echo.htmlacademy.ru">
 
-        <p>
-          Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение рабочего дня и&nbsp;обязательно
-          поможем найти ответ на&nbsp;ваш вопрос!
-        </p>
+          <h3>Заказать звонок</h3>
 
-        <div class="field popup__name">
-          <label for="popup-name"><span class="visually-hidden">Введите ваше имя</span></label>
-          <input type="text" name="popup-name" id="popup-name" placeholder="Имя" minlength="2" maxlength="24" required
-            autocomplete="off">
-        </div>
+          <p>
+            Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;течение рабочего дня и&nbsp;обязательно
+            поможем найти ответ на&nbsp;ваш вопрос!
+          </p>
 
-        <div class="field popup__phone">
-          <label for="popup-phone"><span class="visually-hidden">Введите ваш телефон</span></label>
-          <input type="tel" name="popup-phone" id="popup-phone" placeholder="Телефон" minlength="16" maxlength="16"
-            required autocomplete="off">
-        </div>
+          <div class="field popup__name">
+            <label for="popup-name"><span class="visually-hidden">Введите ваше имя</span></label>
+            <input type="text" name="popup-name" id="popup-name" placeholder="Имя" minlength="1" maxlength="37" required
+              autocomplete="off">
+          </div>
 
-        <button class="btn popup__btn submit-js" type="submit">перезвоните мне</button>
+          <div class="field popup__phone">
+            <label for="popup-phone"><span class="visually-hidden">Введите ваш телефон</span></label>
+            <input type="tel" name="popup-phone" id="popup-phone" placeholder="Телефон" minlength="16" maxlength="16"
+              required autocomplete="off">
+          </div>
 
-        <div class="popup__checkbox">
-          <input type="checkbox" name="popup-checkbox" id="popup-checkbox">
+          <button class="btn popup__btn submit-js" type="submit">перезвоните мне</button>
 
-          <label for="popup-checkbox">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
-        </div>
-      </form>
+          <div class="popup__checkbox">
+            <input type="checkbox" name="popup-checkbox" id="popup-checkbox" required>
 
+            <label for="popup-checkbox">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+          </div>
+        </form>
+
+      </div>
     </div>
   </div>
 
   <div class="popup popup--success">
-    <div class="popup__inner">
+    <div class="popup__overlay"></div>
+    <div class="popup__wrapper">
+      <div class="popup__inner">
 
-      <button class="popup__close" type="button" aria-label="закрыть попап">&times;</button>
+        <button class="popup__close" type="button" aria-label="закрыть попап">&times;</button>
 
-      <div class="popup__success-content">
-        <span class="popup__success-icon"></span>
+        <div class="popup__success-content">
+          <span class="popup__success-icon"></span>
 
-        <h3>Заявка принята</h3>
+          <h3>Заявка принята</h3>
 
-        <p>
-          Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
-        </p>
+          <p>
+            Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
+          </p>
 
-        <button class="btn popup__btn popup__btn-js" type="button">понятно</button>
+          <button class="btn popup__btn popup__btn-js" type="button">понятно</button>
+        </div>
+
       </div>
-
     </div>
+
   </div>
 
   <script src="js/vendor.min.js"></script>

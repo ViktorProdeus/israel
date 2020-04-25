@@ -17,7 +17,7 @@
   }
 
   input {
-    max-width: 360px;
+    max-width: 100%;
     width: 100%;
     padding: 20px 38px 17px;
 
@@ -36,8 +36,7 @@
 
 .body-fixed {
   position: fixed;
-  height: 100vh;
-  overflow-y: scroll;
+  max-height: 100vh;
   left: 0;
   right: 0;
 }

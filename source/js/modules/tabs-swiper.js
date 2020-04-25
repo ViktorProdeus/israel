@@ -57,12 +57,12 @@
 
 
   var removeClass = function (elem, className) {
-    elem.forEach(function (i) {
+    Array.prototype.forEach.call(elem, function (i) {
       i.classList.remove(className);
     });
   };
 
-  tabs.forEach(function (tab, i) {
+  Array.prototype.forEach.call(tabs, function (tab, i) {
     tab.addEventListener('click', function (evt) {
       evt.preventDefault();
 

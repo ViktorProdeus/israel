@@ -1,37 +1,34 @@
 .programs {
+  padding: 204px 0 51px;
+  margin: 0 auto;
+  max-width: 1566px;
   position: relative;
   z-index: 1;
   overflow: hidden;
 
-  &__container {
-    position: relative;
-    z-index: 1;
+  &::after {
+    position: absolute;
+    z-index: -1;
 
-    max-width: 1171px;
-    margin: 150px auto 0;
-    padding: 55px 8.344% 50px 8.197%;
+    content: "";
+    width: 680px;
+    height: 426px;
+    top: 153px;
+    right: 0;
 
+    @include bg-image("../img/all/programs_bg@1x.png", contain);
 
-    &::after {
-      position: absolute;
-      z-index: -1;
-
-      content: "";
-      width: 680px;
-      height: 426px;
-      top: 2px;
-      right: -97px;
-
-      @include bg-image("../img/all/programs_bg@1x.png", contain);
-
-      @include retina {
-        background-image: url("../img/all/programs_bg@2x.png");
-      }
+    @include retina {
+      background-image: url("../img/all/programs_bg@2x.png");
     }
   }
 
+  h2 {
+    margin-left: 100px;
+  }
+
   &__inner {
-    margin-top: 65px;
+    margin: 65px 0 0 100px;
 
     display: flex;
     align-items: flex-start;
@@ -66,7 +63,7 @@
   &__item-tab--active {
     position: relative;
 
-    @include bg-image("../img/svg/tab-arrow.svg", cover);
+    @include bg-image("../img/svg/tab-arrow.svg", contain);
 
     button {
       font-weight: 500;
@@ -278,12 +275,20 @@
   }
 
   @media (max-width: $tablet--max) {
-    &__container {
-      margin-top: 80px;
+    &::after {
+      position: absolute;
+      z-index: -1;
 
-      &::after {
-        width: 580px;
-        height: 326px;
+      content: "";
+      width: 580px;
+      height: 326px;
+      top: 153px;
+      right: -50px;
+
+      @include bg-image("../img/mobile/programs_bg@1x.png", contain);
+
+      @include retina {
+        background-image: url("../img/mobile/programs_bg@2x.png");
       }
     }
 
@@ -303,30 +308,15 @@
   }
 
   @media (max-width: $mobile--max) {
-    &__container {
-      margin-top: 30px;
-      padding: 55px 16px 25px;
+    padding: 85px 0 26px;
 
-      &::after {
-        width: 296px;
-        height: 201px;
-        top: 170px;
-        right: -1px;
-
-        @include bg-image("../img/mobile/programs_bg@1x.png", contain);
-
-        @include retina {
-          background-image: url("../img/mobile/programs_bg@2x.png");
-        }
-      }
-
-      h2 {
-        text-align: center;
-      }
+    h2 {
+      margin: 0 0 4px;
+      text-align: center;
     }
 
     &__inner {
-      margin-top: 4px;
+      margin: 0;
       flex-direction: column;
     }
 
@@ -363,7 +353,7 @@
 
     &__btn {
       opacity: 0.4;
-      transition: all $animate;
+      transition: color $animate;
 
       &:hover {
         opacity: 1;

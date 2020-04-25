@@ -1,15 +1,25 @@
 .izrael {
-  margin: -241px auto 0;
-  padding-top: 45px;
+  position: relative;
+  margin: 0 auto;
+  padding: 61px 0 140px;
 
   max-width: 1566px;
-  width: 100%;
-  min-height: 950px;
 
-  @include bg-image("../img/all/izrael__bg@1x.png", cover);
+  &::before {
+    position: absolute;
+    z-index: 1;
 
-  @include retina {
-    background-image: url("../img/all/izrael__bg@2x.png");
+    content: "";
+    width: 100%;
+    min-height: 950px;
+    top: 15px;
+    left: 0;
+
+    @include bg-image("../img/all/izrael__bg@1x.png", cover);
+
+    @include retina {
+      background-image: url("../img/all/izrael__bg@2x.png");
+    }
   }
 
   h2 {
@@ -21,7 +31,7 @@
   }
 
   p {
-    max-width: 720px;
+    max-width: 722px;
     padding-right: 9px;
     margin: 0 auto;
 
@@ -37,18 +47,17 @@
   }
 
   &__list {
-    margin: -20px 0 0;
+    margin: 0;
     padding: 0;
+    transform: translateY(-21px);
 
     list-style: none;
     display: grid;
 
-    grid-template-columns: minmax(auto, 482px) minmax(auto, 211px) minmax(auto, 200px) minmax(auto, 211px);
+    grid-template-columns: minmax(auto, 482px) minmax(auto, 211px) minmax(auto, 200px) minmax(auto, 214px);
     justify-content: space-between;
-    align-items: end;
 
-    grid-column-gap: 6px;
-    grid-row-gap: 20px;
+    grid-row-gap: 30px;
 
     grid-template-areas:
       "big foto2 foto3 foto3"
@@ -101,11 +110,11 @@
     &[data-photo="2"] {
       grid-area: foto2;
 
-      margin-top: 54px;
+      margin-top: 66px;
       max-width: 211px;
       min-height: 318px;
 
-      @include bg-image("../img/all/2img@1x.png", cover);
+      @include bg-image("../img/all/2img@1x.png", 100%);
 
       @include retina {
         background-image: url("../img/all/2img@2x.png");
@@ -120,11 +129,12 @@
     &[data-photo="3"] {
       grid-area: foto3;
 
-      margin-left: 13px;
+      margin-top: 66px;
+      margin-left: 15px;
       max-width: 411px;
       min-height: 318px;
 
-      @include bg-image("../img/all/3img@1x.png", cover);
+      @include bg-image("../img/all/3img@1x.png", 100%);
 
       @include retina {
         background-image: url("../img/all/3img@2x.png");
@@ -142,7 +152,7 @@
       max-width: 411px;
       min-height: 318px;
 
-      @include bg-image("../img/all/4img@1x.png", cover);
+      @include bg-image("../img/all/4img@1x.png", 100%);
 
       @include retina {
         background-image: url("../img/all/4img@2x.png");
@@ -157,10 +167,10 @@
     &[data-photo="5"] {
       grid-area: foto5;
 
-      max-width: 211px;
+      max-width: 214px;
       min-height: 318px;
 
-      @include bg-image("../img/all/5img@1x.png", cover);
+      @include bg-image("../img/all/5img@1x.png", 100%);
 
       @include retina {
         background-image: url("../img/all/5img@2x.png");
@@ -178,9 +188,13 @@
   }
 
   @media (max-width: $tablet--max) {
-    margin: -155px auto 0;
+    margin: 0 auto;
+    padding: 61px 0 18px;
     min-height: auto;
-    background-image: none;
+
+    &::before {
+      display: none;
+    }
 
     p {
       max-width: 100%;
@@ -263,6 +277,15 @@
   }
 
   @media (max-width: $mobile--max) {
-    margin: 35px auto 0;
+    padding-top: 80px;
+    padding-bottom: 0;
+
+    h2 {
+      margin-left: 0;
+    }
+
+    &__slider {
+      padding-top: 27px;
+    }
   }
 }

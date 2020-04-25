@@ -25,7 +25,10 @@ gulp.task("css", function () {
     .pipe(sass({
       includePaths: require("node-normalize-scss").includePaths
     }))
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([autoprefixer({
+      grid: true,
+      overrideBrowserslist: ['ie >= 11, iOS >= 12, > 0.2%, Safari >= 11']
+    })]))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))

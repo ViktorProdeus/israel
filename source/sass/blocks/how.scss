@@ -1,18 +1,36 @@
 .how {
+  position: relative;
+  z-index: 1;
+
   margin: 0 auto;
   max-width: 1566px;
-  min-height: 1208px;
-  transform: translateY(-58px);
+  padding-bottom: 150px;
 
-  @include bg-image("../img/all/how__bg@1x.png", cover);
+  &::before {
+    position: absolute;
+    z-index: -1;
 
-  @include retina {
-    background-image: url("../img/all/how__bg@2x.png");
+    content: "";
+    width: 100%;
+    min-height: 1208px;
+    transform: translateY(-58px);
+
+    @include bg-image("../img/all/how__bg@1x.png", contain);
+    background-size: 100%;
+
+    @include retina {
+      background-image: url("../img/all/how__bg@2x.png");
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__inner {
-    padding: 234px 0 0 51.7%;
-    width: 100%;
+    padding: 176px 0 0;
+    width: 48.3%;
 
     h2 {
       margin-bottom: 22px;
@@ -34,14 +52,13 @@
       line-height: 1.7;
     }
 
-    strong {
+    span {
       position: relative;
 
       display: block;
       margin-left: -3px;
       padding: 2px 0 0 15px;
 
-      font-weight: 400;
       color: rgba($black, 0.5);
 
       border-left: 4px solid transparent;
@@ -53,13 +70,22 @@
   &__list {
     margin: 0 0 47px;
     padding: 0;
-    z-index: -10;
 
-    list-style: none;
+    position: relative;
 
-    border-left: 1px solid transparent;
-    border-image: url("../img/svg/left-border-dashed.svg") 1 / 2px round;
-    border-image-width: 0 0 0 2px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 85%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      border-left: 1px solid transparent;
+      border-image: url("../img/svg/left-border-dashed.svg") 1 / 2px round;
+      border-image-width: 0 0 0 2px;
+    }
   }
 
   &__item {
@@ -98,11 +124,10 @@
     }
 
     &::before {
-      position: absolute;
-
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       margin: 0;
 
       content: attr(data-item);
@@ -121,7 +146,7 @@
     }
 
     p {
-      margin: 0 0 0 59px;
+      margin: 0 0 0 24px;
       max-width: 450px;
 
       @include text-regular-lh;
@@ -129,12 +154,24 @@
   }
 
   @media (max-width: $tablet--max) {
-    min-height: 950px;
-    transform: translateY(-100px);
+    &::before {
+      min-height: 950px;
+      transform: translateY(-100px);
+
+      width: 100%;
+
+
+      @include bg-image("../img/all/how__bg@1x.png", contain);
+
+      background-size: 100%;
+
+      @include retina {
+        background-image: url("../img/all/how__bg@2x.png");
+      }
+    }
 
     &__inner {
-      padding: 190px 0 0 51.7%;
-      width: 100%;
+      padding: 70px 0 0;
 
       h2 {
         margin-bottom: 22px;
@@ -153,7 +190,7 @@
         line-height: 1.6;
       }
 
-      strong {
+      span {
         @include text-regular-mobile;
       }
     }
@@ -161,37 +198,36 @@
     &__list {
       margin: 0 0 40px;
       padding: 0;
-      z-index: -10;
-
-      list-style: none;
-
-      border-left: 1px solid transparent;
-      border-image: url("../img/svg/left-border-dashed.svg") 1 / 2px round;
-      border-image-width: 0 0 0 2px;
 
       p {
-        margin: 0 0 0 59px;
-
         @include text-regular-mobile;
       }
     }
 
     &__item {
       margin-bottom: 30px;
+
+      p {
+        margin: 0 0 0 17px;
+      }
     }
   }
 
   @media (max-width: $mobile--max) {
-    min-height: auto;
-    transform: translateY(0);
+    padding-bottom: 0;
 
-    @include bg-image("../img/mobile/stamp@1x.png", contain);
+    &::before {
+      width: 100%;
+      transform: translateY(0);
 
-    background-size: 216px 199px;
-    background-position: 100% 359px;
+      @include bg-image("../img/mobile/stamp@1x.png", contain);
 
-    @include retina {
-      background-image: url("../img/mobile/stamp@1x.png");
+      background-size: 216px 199px;
+      background-position: 100% 45.5%;
+
+      @include retina {
+        background-image: url("../img/mobile/stamp@2x.png");
+      }
     }
 
     &__inner {
@@ -199,7 +235,7 @@
       width: 100%;
 
       h2 {
-        padding-top: 84px;
+        padding-top: 85px;
         margin-bottom: 22px;
         text-align: center;
 
@@ -207,7 +243,7 @@
       }
 
       p {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
         max-width: 100%;
 
         @include text-regular-mobile;
@@ -219,7 +255,7 @@
         line-height: 1.6;
       }
 
-      strong {
+      span {
         margin-left: -6px;
         padding: 2px 0 0 10px;
       }
@@ -227,14 +263,14 @@
 
     &__list {
       margin: 0 0 20px 8px;
-
-      p {
-        margin: 0 0 0 52px;
-      }
     }
 
     &__item {
       margin: 0 0 38px -17px;
+
+      p {
+        margin: 0 0 0 17px;
+      }
 
       &:last-child {
         margin-bottom: 0;
