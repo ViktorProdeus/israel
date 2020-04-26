@@ -35,53 +35,42 @@
   &__link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     margin-top: 47px;
-    padding: 20px 40px;
+    padding: 20px;
+    padding-left: 43px;
 
     max-width: 230px;
 
     svg {
       fill: white;
+      margin-right: 10px;
+      flex-shrink: 0;
     }
   }
 
   @media (max-width: $tablet--max) {
     &__inner {
-      padding: 20px 0 0;
+      padding: 70px 0 0;
 
       h2 {
         margin-bottom: 183px;
-        padding-top: 50px;
       }
     }
   }
 
   @media (max-width: $mobile--only) {
-    position: relative;
-    z-index: 1;
+    padding-bottom: 0;
 
-    min-height: 454px;
-    padding-bottom: 50px;
-    background-image: none;
+    min-width: 320px;
+    min-height: 272px;
 
-    &::before {
-      position: absolute;
-      z-index: -1;
+    @include bg-image("../img/mobile/promo__bg@1x.jpg", cover);
 
-      content: "";
-      top: 21.5%;
-      left: 0;
-
-      min-width: 320px;
-      min-height: 272px;
-
-      @include bg-image("../img/mobile/promo__bg@1x.jpg", contain);
-
-      @include retina {
-        background-image: url("../img/mobile/promo__bg@2x.jpg");
-      }
+    @include retina {
+      background-image: url("../img/mobile/promo__bg@2x.jpg");
+      // }
     }
 
     &__container {
@@ -94,8 +83,9 @@
       h2 {
         @include h2;
 
-        padding-top: 66px;
-        margin-bottom: 94px;
+        padding-top: 0;
+        margin-top: -40px;
+        margin-bottom: 96px;
       }
 
       p {
@@ -106,8 +96,8 @@
     }
 
     &__link {
-      margin: 58px auto 0;
-      padding: 20px 57px;
+      margin: 57px auto -96px;
+      padding-left: 57px;
 
       max-width: 262px;
 
