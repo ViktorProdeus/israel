@@ -33,27 +33,17 @@
   }
 
   &__link {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     margin-top: 47px;
-    padding: 23px 25px 19px 72px;
+    padding: 20px 40px;
 
-    display: block;
     max-width: 230px;
 
-    &::before {
-      position: absolute;
-      z-index: 1;
-
-      content: "";
-      width: 24px;
-      height: 24px;
-      top: 34%;
-      left: 19%;
-
-      background-image: url("../img/svg/insta.svg");
-      background-position: 0 0;
-      background-repeat: no-repeat;
+    svg {
+      fill: white;
     }
   }
 
@@ -117,7 +107,7 @@
 
     &__link {
       margin: 58px auto 0;
-      padding-left: 87px;
+      padding: 20px 57px;
 
       max-width: 262px;
 

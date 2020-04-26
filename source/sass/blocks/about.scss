@@ -66,7 +66,7 @@
 
     &::before {
       position: absolute;
-      z-index: 1;
+      z-index: -1;
       content: "";
       width: 64px;
       height: 64px;
@@ -79,28 +79,12 @@
       transition: box-shadow $animate, background $animate;
     }
 
-    &::after {
-      position: absolute;
-      z-index: 2;
-
-      content: "";
-      width: 15px;
-      height: 19px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-31%, -50%);
-
-      background-image: url("../img/svg/play.svg");
-      background-repeat: no-repeat;
-      transition: background $animate;
-    }
-
     &:hover::before {
       box-shadow: $shadow--icon;
     }
 
-    &:hover::after {
-      background-image: url("../img/svg/play-hover.svg");
+    &:hover svg {
+      fill: $blue-hover;
     }
 
     &:focus {
@@ -108,11 +92,17 @@
     }
 
     &:focus::before {
-      background-color: #f4f4f4;
+      background-color: $white-focus;
     }
 
-    &:focus::after {
-      background-image: url("../img/svg/play.svg");
+    &:focus svg {
+      fill: $blue;
+    }
+
+    svg {
+      fill: $blue;
+      transform: translateX(3px);
+      transition: fill $animate;
     }
   }
 

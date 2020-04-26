@@ -35,7 +35,7 @@
   }
 
   &--show {
-    display: flex;
+    display: block;
   }
 
   &__inner {
@@ -144,7 +144,7 @@
     input {
       display: none;
 
-      &:checked+label::after {
+      &:checked + label::after {
         position: absolute;
         z-index: 1;
 

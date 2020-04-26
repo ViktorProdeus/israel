@@ -85,27 +85,32 @@
   &__item-tab--active &__btn {
     &--general::before,
     &--general:hover::before {
-      background-image: url("../img/all/general-active-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -10px -120px;
     }
 
     &--stady::before,
     &--stady:hover::before {
-      background-image: url("../img/all/stady-active-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -10px -10px;
     }
 
     &--internships::before,
     &--internships:hover::before {
-      background-image: url("../img/all/internships-active-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -174px -10px;
     }
 
     &--volunteering::before,
     &--volunteering:hover::before {
-      background-image: url("../img/all/volunteering-active-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -66px -65px;
     }
 
     &--religious::before,
     &--religious:hover::before {
-      background-image: url("../img/all/religious-active-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -10px -173px;
     }
   }
 
@@ -124,7 +129,6 @@
     border: 0;
     background-color: transparent;
     cursor: pointer;
-    transition: color $animate;
 
     &:hover {
       color: $yellow;
@@ -141,7 +145,6 @@
 
       background-position: center;
       background-repeat: no-repeat;
-      transition: background-image $animate;
     }
   }
 
@@ -152,11 +155,13 @@
       width: 28px;
       height: 33px;
       margin-left: 4px;
-      background-image: url("../img/all/general-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -106px -120px;
     }
 
     &:hover::before {
-      background-image: url("../img/all/general-hover-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -58px -120px;
     }
   }
 
@@ -166,11 +171,13 @@
     &::before {
       width: 36px;
       height: 35px;
-      background-image: url("../img/all/stady-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -10px -65px;
     }
 
     &:hover::before {
-      background-image: url("../img/all/stady-hover-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -66px -10px;
     }
 
     span {
@@ -186,11 +193,13 @@
 
       width: 32px;
       height: 25px;
-      background-image: url("../img/all/internships-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -174px -100px;
     }
 
     &:hover::before {
-      background-image: url("../img/all/internships-hover-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -174px -55px;
     }
 
     span {
@@ -206,11 +215,13 @@
 
       width: 32px;
       height: 29px;
-      background-image: url("../img/all/volunteering-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -122px -59px;
     }
 
     &:hover::before {
-      background-image: url("../img/all/volunteering-hover-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -122px -10px;
     }
 
     span {
@@ -225,11 +236,13 @@
       margin: 7px 0 0 6px;
       width: 23px;
       height: 25px;
-      background-image: url("../img/all/religious-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -96px -173px;
     }
 
     &:hover::before {
-      background-image: url("../img/all/religious-hover-icon.png");
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -53px -173px;
     }
 
     span {
@@ -340,9 +353,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
       box-sizing: content-box;
-
 
       button {
         padding: 8px 14px 7px;
@@ -353,7 +364,6 @@
 
     &__btn {
       opacity: 0.4;
-      transition: color $animate;
 
       &:hover {
         opacity: 1;
@@ -379,18 +389,11 @@
 
     &__btn--stady {
       min-width: 154px;
-
-      &::before {
-        background-size: 32px 31px;
-        background-position: -2px 0;
-      }
     }
 
     &__btn--internships {
       &::before {
         margin: 0;
-        background-size: 28px 23px;
-        background-position: 0 0;
       }
 
       span {

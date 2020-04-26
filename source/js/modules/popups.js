@@ -4,6 +4,7 @@
 
   var body = document.querySelector('body');
   var popups = document.querySelectorAll('.popup');
+  var popupWrappers = document.querySelectorAll('.popup__wrapper');
   var buttonsOrder = document.querySelectorAll('.open-order-js');
   var buttonsClose = document.querySelectorAll('.popup__close');
   var buttonPopup = document.querySelector('.popup__btn-js');
@@ -95,12 +96,12 @@
     }
   });
 
-  Array.prototype.forEach.call(popups, function (element) {
-    element.addEventListener('click', function (evt) {
-      if (evt.target === element || evt.target === buttonPopup) {
+  Array.prototype.forEach.call(popupWrappers, function (element) {
+    element.addEventListener('mousedown', function (evt) {
+      if (evt.target === element && evt.which === 1 || evt.target === buttonPopup) {
 
         enableScrolling();
-        element.classList.remove('popup--show');
+        element.parentElement.classList.remove('popup--show');
       }
     });
   });

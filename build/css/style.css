@@ -1369,7 +1369,7 @@ input:focus {
     cursor: pointer; }
     .about__movie-play::before {
       position: absolute;
-      z-index: 1;
+      z-index: -1;
       content: "";
       width: 64px;
       height: 64px;
@@ -1383,31 +1383,23 @@ input:focus {
       transition: background 0.2s linear, -webkit-box-shadow 0.2s linear;
       transition: box-shadow 0.2s linear, background 0.2s linear;
       transition: box-shadow 0.2s linear, background 0.2s linear, -webkit-box-shadow 0.2s linear; }
-    .about__movie-play::after {
-      position: absolute;
-      z-index: 2;
-      content: "";
-      width: 15px;
-      height: 19px;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-31%, -50%);
-              transform: translate(-31%, -50%);
-      background-image: url("../img/svg/play.svg");
-      background-repeat: no-repeat;
-      -webkit-transition: background 0.2s linear;
-      transition: background 0.2s linear; }
     .about__movie-play:hover::before {
       -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
               box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
-    .about__movie-play:hover::after {
-      background-image: url("../img/svg/play-hover.svg"); }
+    .about__movie-play:hover svg {
+      fill: #63d3fd; }
     .about__movie-play:focus {
       outline: none; }
     .about__movie-play:focus::before {
       background-color: #f4f4f4; }
-    .about__movie-play:focus::after {
-      background-image: url("../img/svg/play.svg"); }
+    .about__movie-play:focus svg {
+      fill: #1fc0fc; }
+    .about__movie-play svg {
+      fill: #1fc0fc;
+      -webkit-transform: translateX(3px);
+              transform: translateX(3px);
+      -webkit-transition: fill 0.2s linear;
+      transition: fill 0.2s linear; }
   .about::after {
     position: absolute;
     z-index: -1;
@@ -1555,15 +1547,20 @@ input:focus {
       .programs__item-tab--active button:hover {
         color: white; }
   .programs__item-tab--active .programs__btn--general::before, .programs__item-tab--active .programs__btn--general:hover::before {
-    background-image: url("../img/all/general-active-icon.png"); }
+    background-image: url("../img/all/icons_sprite.png");
+    background-position: -10px -120px; }
   .programs__item-tab--active .programs__btn--stady::before, .programs__item-tab--active .programs__btn--stady:hover::before {
-    background-image: url("../img/all/stady-active-icon.png"); }
+    background-image: url("../img/all/icons_sprite.png");
+    background-position: -10px -10px; }
   .programs__item-tab--active .programs__btn--internships::before, .programs__item-tab--active .programs__btn--internships:hover::before {
-    background-image: url("../img/all/internships-active-icon.png"); }
+    background-image: url("../img/all/icons_sprite.png");
+    background-position: -174px -10px; }
   .programs__item-tab--active .programs__btn--volunteering::before, .programs__item-tab--active .programs__btn--volunteering:hover::before {
-    background-image: url("../img/all/volunteering-active-icon.png"); }
+    background-image: url("../img/all/icons_sprite.png");
+    background-position: -66px -65px; }
   .programs__item-tab--active .programs__btn--religious::before, .programs__item-tab--active .programs__btn--religious:hover::before {
-    background-image: url("../img/all/religious-active-icon.png"); }
+    background-image: url("../img/all/icons_sprite.png");
+    background-position: -10px -173px; }
   .programs__btn {
     position: relative;
     padding: 0;
@@ -1582,9 +1579,7 @@ input:focus {
     line-height: 1.2;
     border: 0;
     background-color: transparent;
-    cursor: pointer;
-    -webkit-transition: color 0.2s linear;
-    transition: color 0.2s linear; }
+    cursor: pointer; }
     .programs__btn:hover {
       color: #ffc341; }
     .programs__btn:focus {
@@ -1593,26 +1588,28 @@ input:focus {
       display: block;
       content: "";
       background-position: center;
-      background-repeat: no-repeat;
-      -webkit-transition: background-image 0.2s linear;
-      transition: background-image 0.2s linear; }
+      background-repeat: no-repeat; }
   .programs__btn--general {
     min-width: 102px; }
     .programs__btn--general::before {
       width: 28px;
       height: 33px;
       margin-left: 4px;
-      background-image: url("../img/all/general-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -106px -120px; }
     .programs__btn--general:hover::before {
-      background-image: url("../img/all/general-hover-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -58px -120px; }
   .programs__btn--stady {
     min-width: 167px; }
     .programs__btn--stady::before {
       width: 36px;
       height: 35px;
-      background-image: url("../img/all/stady-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -10px -65px; }
     .programs__btn--stady:hover::before {
-      background-image: url("../img/all/stady-hover-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -66px -10px; }
     .programs__btn--stady span {
       margin-top: 3px; }
   .programs__btn--internships {
@@ -1621,9 +1618,11 @@ input:focus {
       margin: 5px 0 0 2px;
       width: 32px;
       height: 25px;
-      background-image: url("../img/all/internships-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -174px -100px; }
     .programs__btn--internships:hover::before {
-      background-image: url("../img/all/internships-hover-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -174px -55px; }
     .programs__btn--internships span {
       margin-top: 10px; }
   .programs__btn--volunteering {
@@ -1632,9 +1631,11 @@ input:focus {
       margin: 5px 0 0 2px;
       width: 32px;
       height: 29px;
-      background-image: url("../img/all/volunteering-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -122px -59px; }
     .programs__btn--volunteering:hover::before {
-      background-image: url("../img/all/volunteering-hover-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -122px -10px; }
     .programs__btn--volunteering span {
       margin-top: 5px; }
   .programs__btn--religious {
@@ -1643,9 +1644,11 @@ input:focus {
       margin: 7px 0 0 6px;
       width: 23px;
       height: 25px;
-      background-image: url("../img/all/religious-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -96px -173px; }
     .programs__btn--religious:hover::before {
-      background-image: url("../img/all/religious-hover-icon.png"); }
+      background-image: url("../img/all/icons_sprite.png");
+      background-position: -53px -173px; }
     .programs__btn--religious span {
       margin-top: 12px; }
   .programs__scrollbar {
@@ -1759,9 +1762,7 @@ input:focus {
           width: 154px;
           height: 35px; }
       .programs__btn {
-        opacity: 0.4;
-        -webkit-transition: color 0.2s linear;
-        transition: color 0.2s linear; }
+        opacity: 0.4; }
         .programs__btn:hover {
           opacity: 1;
           color: #ffc341; }
@@ -1777,13 +1778,8 @@ input:focus {
         width: 132px; }
       .programs__btn--stady {
         min-width: 154px; }
-        .programs__btn--stady::before {
-          background-size: 32px 31px;
-          background-position: -2px 0; }
       .programs__btn--internships::before {
-        margin: 0;
-        background-size: 28px 23px;
-        background-position: 0 0; }
+        margin: 0; }
       .programs__btn--internships span {
         margin: 0; }
       .programs__btn--volunteering::before {
@@ -2268,9 +2264,7 @@ input:focus {
   .popup--success, .popup--order {
     display: none; }
   .popup--show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    display: block; }
   .popup__inner {
     position: relative;
     max-width: 480px;
@@ -2705,22 +2699,20 @@ input:focus {
       color: white;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
   .promo__link {
-    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 47px;
-    padding: 23px 25px 19px 72px;
-    display: block;
+    padding: 20px 40px;
     max-width: 230px; }
-    .promo__link::before {
-      position: absolute;
-      z-index: 1;
-      content: "";
-      width: 24px;
-      height: 24px;
-      top: 34%;
-      left: 19%;
-      background-image: url("../img/svg/insta.svg");
-      background-position: 0 0;
-      background-repeat: no-repeat; }
+    .promo__link svg {
+      fill: white; }
   @media (max-width: 1023px) {
     .promo__inner {
       padding: 20px 0 0; }
@@ -2775,7 +2767,7 @@ input:focus {
           margin-left: 10px; }
       .promo__link {
         margin: 58px auto 0;
-        padding-left: 87px;
+        padding: 20px 57px;
         max-width: 262px; }
         .promo__link::before {
           top: 33%;
