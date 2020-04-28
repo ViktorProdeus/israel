@@ -2771,7 +2771,7 @@ input:focus {
 
 .questions {
   position: relative;
-  padding: 137px 0;
+  padding: 137px 0 126px;
   margin: 0 auto;
   max-width: 1566px;
   min-height: 950px;
@@ -2805,7 +2805,7 @@ input:focus {
     padding: 0;
     list-style: none;
     max-width: 560px;
-    min-height: 720px; }
+    min-height: 730px; }
   .questions__tabs-item {
     position: relative;
     min-height: 96px;
@@ -2960,7 +2960,7 @@ input:focus {
     background-image: url("../img/all/reviews__bg@1x.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain; }
+    background-size: cover; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       .reviews::before {
         background-image: url("../img/all/reviews__bg@2x.png"); } }
@@ -2984,7 +2984,9 @@ input:focus {
         -ms-flex-pack: start;
             justify-content: flex-start; }
     .reviews__item img {
-      margin-right: 40px; }
+      margin-right: 40px;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
   .reviews__content {
     padding: 40px 90px 0 0; }
     .reviews__content h3 {
@@ -3057,7 +3059,8 @@ input:focus {
   @media (max-width: 1023px) {
     .reviews::before {
       top: 442px;
-      height: 60%; }
+      height: 60%;
+      background-size: contain; }
     .reviews h2 {
       margin-bottom: 30px; }
     .reviews__item {

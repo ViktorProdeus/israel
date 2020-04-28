@@ -17,7 +17,7 @@
     position: absolute;
     z-index: -1;
 
-    @include bg-image("../img/all/reviews__bg@1x.png", contain);
+    @include bg-image("../img/all/reviews__bg@1x.png", cover);
 
     @include retina {
       background-image: url("../img/all/reviews__bg@2x.png");
@@ -47,6 +47,7 @@
 
     img {
       margin-right: 40px;
+      flex-shrink: 0;
     }
   }
 
@@ -155,6 +156,8 @@
     &::before {
       top: 442px;
       height: 60%;
+
+      background-size: contain;
     }
 
     h2 {
