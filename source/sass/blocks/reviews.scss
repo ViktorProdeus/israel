@@ -1,0 +1,301 @@
+.reviews {
+  margin: 0 auto;
+
+  max-width: 1566px;
+  position: relative;
+
+  padding: 20px 0;
+
+  &::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+
+    top: -5px;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+
+    @include bg-image("../img/all/reviews__bg@1x.png", contain);
+
+    @include retina {
+      background-image: url("../img/all/reviews__bg@2x.png");
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__slider {
+    max-width: 1171px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    img {
+      margin-right: 40px;
+    }
+  }
+
+  &__content {
+    padding: 40px 90px 0 0;
+
+    h3 {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.5;
+
+      color: $black;
+      opacity: 0.74;
+    }
+
+    dl {
+      margin: 0 0 30px;
+      display: flex;
+    }
+
+    dt {
+      color: $blue;
+    }
+
+    dd {
+      margin-left: 10px;
+    }
+
+    p {
+      @include text-big;
+
+      margin-bottom: 18px;
+      opacity: 0.74;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 47px;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    text-decoration-line: underline;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      text-decoration-line: none;
+    }
+  }
+
+  &__social {
+    margin: 0 0 0 auto;
+    width: 120px;
+    transform: translateX(10px);
+  }
+
+  &__pagination {
+    width: 100px;
+    left: 31.7%;
+    bottom: 7px;
+
+    font-size: 17px;
+    line-height: 1.5;
+
+    color: $black;
+    opacity: 0.5;
+  }
+
+  &__prev,
+  &__next {
+    height: 40px;
+    top: auto;
+    bottom: 1px;
+    border: 0;
+    background-color: transparent;
+
+    &::after {
+      font-size: 17px;
+      color: rgba($black, 0.2);
+      transition: color $animate;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      color: rgba($black, 1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__prev {
+    left: 38.8%;
+  }
+
+  &__next {
+    right: 56.5%;
+  }
+
+  @media (max-width: $tablet--max) {
+    &::before {
+      top: 442px;
+      height: 60%;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__content {
+      padding: 100px 40px 0;
+
+      h3 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__prev,
+    &__next {
+      top: 538px;
+      bottom: 100%;
+    }
+
+    &__prev {
+      left: 53%;
+    }
+
+    &__next {
+      right: 40%;
+    }
+
+    &__link {
+      margin-bottom: 20px;
+    }
+
+    &__social {
+      margin: 0 auto 0 0;
+    }
+
+    &__pagination {
+      left: 44%;
+      bottom: 100%;
+      top: 525px;
+    }
+  }
+
+  @media (max-width: $mobile--max) {
+    @include bg-image("../img/mobile/reviews__bg@1x.png", contain);
+
+    background-position: center 710px;
+
+    @include retina {
+      background-image: url("../img/mobile/reviews__bg@2x.png");
+    }
+
+    &::before {
+      max-width: 100%;
+      height: 261px;
+
+      top: 544px;
+      right: 0;
+
+      z-index: -1;
+
+      @include bg-image("../img/mobile/sketch@1x.png", contain);
+
+      background-position: right;
+
+      @include retina {
+        background-image: url("../img/mobile/sketch@2x.png");
+      }
+    }
+
+    &__item {
+      img {
+        width: 233px;
+        height: auto;
+
+        transform: translate(21px, -3px);
+      }
+    }
+
+    &__content {
+      padding: 65px 16px 0;
+
+      h3 {
+        text-align: left;
+        margin-bottom: 8px;
+      }
+
+      dl {
+        margin-bottom: 22px;
+
+        @include text-regular-mobile;
+
+        flex-wrap: wrap;
+      }
+
+      dt {
+        width: 100%;
+      }
+
+      dd {
+        margin-left: 0;
+      }
+
+      p {
+        @include text-big-mobile;
+      }
+    }
+
+    &__prev,
+    &__next {
+      top: 334px;
+      bottom: 100%;
+    }
+
+    &__prev {
+      left: 51%;
+    }
+
+    &__next {
+      right: 32%;
+    }
+
+    &__link {
+      margin: 27px 0 14px;
+      font-size: 16px;
+    }
+
+    &__social {
+      transform: translateX(-12px);
+    }
+
+    &__pagination {
+      left: 25%;
+      bottom: 100%;
+      top: 323px;
+    }
+  }
+}

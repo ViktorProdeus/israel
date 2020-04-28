@@ -1,0 +1,28 @@
+.social {
+  padding: 0;
+
+  list-style: none;
+  display: flex;
+
+  &__link {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: $social-color;
+      transition: fill $animate;
+    }
+
+    &:hover,
+    &:hover svg,
+    &:focus,
+    &:focus svg {
+      fill: $blue;
+      outline: none;
+    }
+  }
+}

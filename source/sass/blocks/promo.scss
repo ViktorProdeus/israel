@@ -70,7 +70,6 @@
 
     @include retina {
       background-image: url("../img/mobile/promo__bg@2x.jpg");
-      // }
     }
 
     &__container {
@@ -96,6 +95,9 @@
     }
 
     &__link {
+      position: relative;
+      z-index: 1;
+
       margin: 57px auto -96px;
       padding-left: 57px;
 

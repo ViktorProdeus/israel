@@ -4,7 +4,7 @@
   padding: 137px 0;
   margin: 0 auto;
   max-width: 1566px;
-  min-height: 1119px;
+  min-height: 950px;
 
   @include bg-image("../img/all/questions__bg@1x.png", cover);
 
@@ -122,6 +122,8 @@
   }
 
   @media (max-width: $tablet--max) {
+    padding: 137px 0 0;
+
     background-image: none;
 
     &::before {
