@@ -1,0 +1,403 @@
+.contacts {
+  position: relative;
+  padding: 86px 0 37px;
+  max-width: 1566px;
+  margin: 0 auto;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+
+    content: "";
+    width: 100%;
+    min-height: 811px;
+    top: -4px;
+    left: 0;
+
+    @include bg-image("../img/all/contacts__bg@1x.png", cover);
+
+    @include retina {
+      background-image: url("../img/all/contacts__bg@2x.png");
+    }
+  }
+
+  h2 {
+    margin-bottom: 48px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+    padding-left: 8%;
+  }
+
+  &__info-content {
+    max-width: 40.968%;
+  }
+
+  &__city {
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba($black, 0.74);
+    margin-bottom: 37px;
+
+    p {
+      position: relative;
+      padding-left: 22px;
+
+      &::before {
+        position: absolute;
+        z-index: 1;
+
+        content: "";
+        width: 12px;
+        height: 18px;
+        top: 0;
+        left: 5px;
+
+        background-image: url("../img/all/marker.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+    }
+
+    b {
+      position: relative;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-left: 14px;
+
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 17px;
+
+        background-image: url("../img/svg/border-city.svg");
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 15px;
+        right: -27px;
+        top: 0;
+
+        background-image: url("../img/all/gps.png");
+      }
+    }
+  }
+
+  &__guide {
+    display: flex;
+    margin-bottom: 26px;
+
+    img {
+      display: block;
+      flex-shrink: 0;
+      margin-right: 25px;
+
+      width: 112px;
+      height: 112px;
+
+      border-radius: 50%;
+    }
+
+    &-info {
+      margin-top: 3px;
+      max-width: 264px;
+
+      p {
+        font-size: 13px;
+        line-height: 1.5;
+        color: rgba($black, 0.74);
+        margin-bottom: 3px;
+      }
+    }
+
+    &-name {
+      margin-bottom: 12px;
+
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+        color: rgba($black, 0.74);
+      }
+
+      span {
+        margin-right: 8px;
+        color: $blue;
+      }
+    }
+  }
+
+  &__social {
+    margin: 0;
+    transform: translateX(-10px);
+
+    a {
+      width: 36px;
+    }
+  }
+
+  &__info-text p {
+    margin-bottom: 20px;
+
+    max-width: 488px;
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: rgba($black, 0.74);
+  }
+
+  &__info-map {
+    margin-top: 3px;
+    max-width: 702px;
+    width: 57.447%;
+  }
+
+  &__map-img-large {
+    position: relative;
+    width: 100%;
+
+    padding-top: 63.818%;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__map-img-small {
+    display: none;
+  }
+
+  &__wrapper-feedback {
+    margin: 0 auto;
+    padding: 0 8%;
+  }
+
+  &__feedback {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__feedback-text {
+    padding-top: 5px;
+    margin: 0 15px 35px 0;
+    max-width: 364px;
+    width: 100%;
+
+    strong {
+      display: block;
+      margin-bottom: 13px;
+
+      font-size: 17px;
+      line-height: 1.5;
+      font-weight: 500;
+
+      color: rgba($black, 0.87);
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba($black, 0.5);
+    }
+  }
+
+  &__feedback-form {
+    max-width: 763px;
+    width: 100%;
+
+    form {
+      display: flex;
+      justify-content: space-between;
+
+      width: 100%;
+    }
+  }
+
+  &__feedback-name,
+  &__feedback-phone {
+    max-width: 250px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  &__feedback-phone {
+    position: relative;
+  }
+
+  &__phone-border {
+    position: absolute;
+    z-index: 1;
+
+    content: "";
+    display: none;
+    width: 110px;
+    height: 2px;
+    left: 53px;
+    top: 42px;
+
+    background-image: url("../img/svg/input-line.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  &__feedback-btn {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: $tablet--max) {
+    padding-top: 26px;
+
+    &::before {
+      display: none;
+    }
+
+    &__info {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    &__guide {
+      margin-bottom: 26px;
+      flex-wrap: wrap;
+    }
+
+    &__guide-info {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__info-content {
+      padding-right: 40px;
+      max-width: 100%;
+    }
+
+    &__info-text p {
+      max-width: 100%;
+    }
+
+    &__info-map {
+      margin: 3px 0 0 auto;
+      width: 100%;
+    }
+
+    &__feedback-text {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $mobile--max) {
+    padding: 53px 0 64px;
+
+    h2 {
+      margin-bottom: 25px;
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    &__info,
+    &__info-content {
+      padding: 0;
+    }
+
+    &__city {
+      margin-bottom: 37px;
+      padding: 0 16px;
+    }
+
+    &__guide {
+      padding: 0 16px;
+    }
+
+    &__guide-info {
+      margin-top: 19px;
+
+      p {
+        margin-bottom: 5px;
+      }
+    }
+
+    &__info-text {
+      padding: 0 16px;
+      margin-bottom: 38px;
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+
+    &__info-map {
+      margin-top: 3px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__map-img-large {
+      display: none;
+    }
+
+    &__map-img-small {
+      display: block;
+
+      position: relative;
+      width: 100%;
+      padding-top: 131.25%;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__wrapper-feedback {
+      padding: 0 16px;
+    }
+
+    &__feedback-text {
+      margin: 0 0 33px;
+
+      strong {
+        font-size: 16px;
+      }
+    }
+
+    &__feedback-form {
+      form {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__feedback-name,
+    &__feedback-phone {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 0 10px;
+    }
+
+    &__feedback-btn {
+      flex-shrink: 0;
+      width: 90%;
+      margin: 16px auto 0;
+    }
+  }
+}

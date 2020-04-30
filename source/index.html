@@ -18,12 +18,12 @@
     <include src="build/img/svg/sprite_auto.svg"></include>
   </div>
 
-  <div class="intro">
+  <div class="intro" id="intro">
     <h1 class="visually-hidden">Путешествие в Израиль</h1>
 
     <div class="container">
       <header class="main-header">
-        <a class="logo main-header__logo">
+        <a class="main-header__logo">
           <!-- 1х: 137px*48px; 2x: 274px*96px -->
           <img src="img/all/logo@1x.png" width="137" height="48" srcset="img/all/logo@1x.png 1x, img/all/logo@2x.png 2x"
             alt="логотип">
@@ -788,14 +788,174 @@
 
         <div class="swiper-pagination reviews__pagination"></div>
 
-        <button type="button" class="swiper-button-next reviews__next" aria-label="следующей слайд"></button>
-        <button type="button" class="swiper-button-prev reviews__prev" aria-label="предыдущий слайд"></button>
+        <button type="button" class="swiper-button-next reviews__next" aria-label="следующей слайд">
+          <svg width="11" height="18">
+            <use xlink:href="#icon-slider-arrow"></use>
+          </svg>
+        </button>
+        <button type="button" class="swiper-button-prev reviews__prev" aria-label="предыдущий слайд">
+          <svg width="11" height="18">
+            <use xlink:href="#icon-slider-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="contacts__info">
+        <div class="contacts__info-content">
+          <h2>Узнать подробности</h2>
+
+          <div class="contacts__city">
+            <p>Ваш город: <b>Новосибирск</b></p>
+          </div>
+
+          <div class="contacts__guide">
+            <!-- 1х: 112px*112px; 2x: 224px*224px -->
+            <img src="img/content/kurator@1x.jpg" width="112" height="112"
+              srcset="img/content/kurator@1x.jpg 1x, img/content/kurator@2x.jpg 2x" alt="Гид Анна Горелик">
+
+            <div class="contacts__guide-info">
+              <div class="contacts__guide-name">
+                <p><span>Ваш куратор:</span>Анна Горелик</p>
+              </div>
+
+              <p>
+                Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»
+              </p>
+
+              <ul class="social contacts__social">
+                <li class="social__item">
+                  <a class="social__link social__link--fb" href="#" aria-label="ссылка на Фэйсбук">
+                    <svg width="11" height="22">
+                      <use xlink:href="#icon-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link social__link--whatsapp" href="#" aria-label="ссылка на whatsapp">
+                    <svg width="20" height="20">
+                      <use xlink:href="#icon-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link social__link--telegram" href="#" aria-label="ссылка на Телеграмм">
+                    <svg width="22" height="18">
+                      <use xlink:href="#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contacts__info-text">
+            <p>
+              Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о&nbsp;проекте &laquo;Маса&raquo;
+              всё!
+              Свяжитесь с&nbsp;куратором, узнайте подробнее о&nbsp;программах и&nbsp;выберите свою !
+            </p>
+          </div>
+        </div>
+
+        <div class="contacts__info-map">
+          <div class="contacts__map-img-large">
+            <!-- 1х: 702px*448px; 2x: 1404px*224px -->
+            <img src="img/content/map@1x.png" width="702" height="448"
+              srcset="img/content/map@1x.png 1x, img/content/map@2x.png 2x" alt="карта">
+          </div>
+
+          <div class="contacts__map-img-small">
+            <!-- 1х: 320px*420px; 2x: 640px*840px -->
+            <img src="img/content/mobile/map@1x.png" width="320" height="420"
+              srcset="img/content/mobile/map@1x.png 1x, img/content/mobile/map@2x.png 2x"
+              alt="карта для мобильных экранов">
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts__wrapper-feedback">
+        <div class="contacts__feedback">
+
+          <div class="contacts__feedback-text">
+            <strong>
+              Оставьте ваши контакты, если у&nbsp;вас
+              <br> остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!
+            </strong>
+
+            <p>
+              Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!
+            </p>
+          </div>
+
+          <div class="contacts__feedback-form form-js">
+            <form method="post" action="https://echo.htmlacademy.ru">
+              <div class="field contacts__feedback-name">
+                <label for="contacts-name">
+                  <span class="visually-hidden">Введите ваше имя</span>
+                </label>
+
+                <input type="text" name="contacts-name" id="contacts-name" placeholder="Имя" minlength="1"
+                  maxlength="37" required autocomplete="off">
+              </div>
+
+              <div class="field contacts__feedback-phone">
+                <label for="contacts-phone"><span class="visually-hidden">Введите ваш телефон</span></label>
+                <input type="tel" name="contacts-phone" id="contacts-phone" placeholder="Телефон" minlength="16"
+                  maxlength="16" required autocomplete="off">
+
+                <span class="contacts__phone-border"></span>
+              </div>
+
+              <button class="btn contacts__feedback-btn submit-js" type="submit">перезвоните мне
+              </button>
+            </form>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <!-- подвал сайта -->
+    <div class="container main-footer__wrapper">
+      <a class="main-footer__logo" href="#intro">
+        <!-- 1х: 85px*27px; 2x: 170*54px -->
+        <img src="img/all/logo-footer@1x.png@1x.png" width="85" height="27" srcset="img/all/logo-footer@1x.png 1x, img/all/logo-footer@2x.png 2x"
+          alt="логотип футера">
+      </a>
+
+      <p>Copyright someDesignCompany ©2019</p>
+
+      <ul class="social main-footer__social">
+        <li class="social__item">
+          <a class="social__link main-footer__social-link social__link--fb main-footer__social-link--fb" href="#" aria-label="ссылка на Фэйсбук">
+            <svg width="11" height="22">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link main-footer__social-link social__link--twitter main-footer__social-link--twitter" href="#" aria-label="ссылка на Твиттер">
+            <svg width="24" height="18">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link main-footer__social-link social__link--insta main-footer__social-link--insta" href="#" aria-label="ссылка на Инстаграмм">
+            <svg width="20" height="20">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 
 
@@ -833,7 +993,7 @@
 
           <button class="btn popup__btn submit-js" type="submit">перезвоните мне</button>
 
-          <div class="popup__checkbox">
+          <div class="popup__checkbox checkbox-js">
             <input type="checkbox" name="popup-checkbox" id="popup-checkbox" required>
 
             <label for="popup-checkbox">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>

@@ -21,6 +21,14 @@
     width: 100%;
     padding: 20px 38px 17px;
 
+    font-family: $firasans;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: rgba($black, 0.87);
+
+
     appearance: none;
     border: 2px solid $default-color;
     border-radius: 80px;

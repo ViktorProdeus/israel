@@ -98,12 +98,17 @@
 
   var userPhoneBlockPopup = document.querySelector('.popup__phone input');
 
+  var userPhoneBlockContacts = document.querySelector('.contacts__feedback-phone input');
+
   if (userPhoneBlockWant) {
     window.imaskJS(userPhoneBlockWant, {mask: '+{7}(000)000-00-00'});
   }
 
   if (userPhoneBlockPopup) {
     window.imaskJS(userPhoneBlockPopup, {mask: '+{7}(000)000-00-00'});
+  }
+  if (userPhoneBlockContacts) {
+    window.imaskJS(userPhoneBlockContacts, {mask: '+{7}(000)000-00-00'});
   }
 
 })();
@@ -254,14 +259,21 @@ if (reviewsSlider) {
 (function () {
 
   var mouseButton = document.querySelector('.intro__button');
-
   var aboutBlock = document.querySelector('.about');
+
+  var footerLogo = document.querySelector('.main-footer__logo');
+  var introBlock = document.querySelector('.intro');
 
   var moveTo = new window.MoveTo();
 
   if (mouseButton) {
     mouseButton.addEventListener('click', function () {
       moveTo.move(aboutBlock);
+    });
+  }
+  if (footerLogo) {
+    footerLogo.addEventListener('click', function () {
+      moveTo.move(introBlock);
     });
   }
 
@@ -360,6 +372,10 @@ if (reviewsSlider) {
   var checkbox = document.querySelector('.popup__checkbox input');
   var submitBtns = document.querySelectorAll('.submit-js');
 
+  var borderPhone = document.querySelector('.contacts__phone-border');
+  var inputFeedbackPhone = document.querySelector('.contacts__feedback-phone input[type=tel]');
+
+
   var inputsSuccessHandler = function () {
     Array.prototype.forEach.call(phoneInputs, function (i) {
       if (i.value.length === 16) {
@@ -377,6 +393,24 @@ if (reviewsSlider) {
       }
     });
   };
+
+  var showBorderPhone = function () {
+    if (inputFeedbackPhone.value.length >= 2) {
+      borderPhone.style = 'display: block';
+
+    } else {
+      borderPhone.style = 'display: none';
+    }
+  };
+
+  if (inputFeedbackPhone) {
+
+    inputFeedbackPhone.oninput = showBorderPhone;
+
+    if (!inputFeedbackPhone) {
+      inputFeedbackPhone.oninput = false;
+    }
+  }
 
   Array.prototype.forEach.call(inputs, function (i) {
     i.addEventListener('input', inputsSuccessHandler);
@@ -409,19 +443,6 @@ if (reviewsSlider) {
       i.addEventListener('input', phoneInputsChangeHandler);
     });
   };
-
-  var removeInputsListener = function () {
-    checkbox.removeEventListener('change', checkboxChangeHandler);
-
-    Array.prototype.forEach.call(nameInputs, function (i) {
-      i.removeEventListener('input', nameInputsChangeHandler);
-    });
-
-    Array.prototype.forEach.call(phoneInputs, function (i) {
-      i.removeEventListener('input', phoneInputsChangeHandler);
-    });
-  };
-
 
   var checkNameInputsValidity = function (el) {
     var flag = true;
@@ -498,21 +519,34 @@ if (reviewsSlider) {
         var parent = returnParent(evt.target, 'form-js');
         var phoneInput = parent.querySelector('input[type=tel]');
         var textInput = parent.querySelector('input[type=text]');
+        var checkboxInput = parent.querySelector('input[type=checkbox]');
         var form = parent.querySelector('form');
 
         if (!textInput) {
           checkPhoneInputValidity(phoneInput);
 
           if (checkPhoneInputsValidity(phoneInput)) {
-            removeInputsListener();
-
             setTimeout(function () {
               form.reset();
               phoneInput.classList.remove('correct');
               showSuccessMessages();
             }, 500);
+          }
 
+        } else if (!checkboxInput) {
+          checkPhoneInputValidity(phoneInput);
+          checkNameInputValidity(textInput);
 
+          if (checkNameInputsValidity(textInput) && checkPhoneInputsValidity(phoneInput)) {
+            setTimeout(function () {
+              form.reset();
+              phoneInput.classList.remove('correct');
+              textInput.classList.remove('correct');
+
+              borderPhone.style = 'display: none';
+
+              showSuccessMessages();
+            }, 500);
           }
 
         } else {
@@ -521,7 +555,6 @@ if (reviewsSlider) {
           checkNameInputValidity(textInput);
 
           if (checkNameInputsValidity(textInput) && checkPhoneInputsValidity(phoneInput) && checkBoxValidity(checkbox)) {
-            removeInputsListener();
             setTimeout(function () {
               form.reset();
               phoneInput.classList.remove('correct');

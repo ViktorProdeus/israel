@@ -223,7 +223,7 @@
       @include bg-image("../img/mobile/stamp@1x.png", contain);
 
       background-size: 216px 199px;
-      background-position: 100% 45.5%;
+      background-position: 100% 47.5%;
 
       @include retina {
         background-image: url("../img/mobile/stamp@2x.png");
