@@ -1,12 +1,14 @@
 .main-footer {
+  margin-top: auto;
+
   width: 100%;
-  padding: 18px 0;
+  padding: 19px 0;
 
   border-top: 1px solid rgba($black, 0.2);
 
   &__wrapper {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
   }
@@ -20,14 +22,15 @@
     }
 
     img {
+      display: block;
       width: 100%;
       height: auto;
     }
   }
 
   p {
-    margin: 0 0 10px 103px;
-    width: 209px;
+    margin: 0 0 0 103px;
+    width: 215px;
 
     font-size: 12px;
     line-height: 1.5;

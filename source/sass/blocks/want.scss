@@ -40,7 +40,7 @@
 
   form {
     position: relative;
-    margin-top: 64px;
+    margin-top: 63px;
 
     &::after {
       position: absolute;
@@ -126,6 +126,7 @@
 
     h2 {
       padding: 0 17px;
+      margin-bottom: 21px;
 
       @include h2-mobile;
       text-align: center;
@@ -141,7 +142,7 @@
 
     form {
       padding: 0 17px;
-      margin-top: 22px;
+      margin-top: 20px;
 
       &::after {
         position: absolute;
@@ -151,7 +152,7 @@
         width: 100%;
         height: 308px;
         padding-bottom: 96%;
-        top: 124px;
+        top: 126px;
         right: 0;
 
         @include bg-image("../img/mobile/girl-flag-bg@1x.png", contain);

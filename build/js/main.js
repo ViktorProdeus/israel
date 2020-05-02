@@ -396,10 +396,10 @@ if (reviewsSlider) {
 
   var showBorderPhone = function () {
     if (inputFeedbackPhone.value.length >= 2) {
-      borderPhone.style = 'display: block';
+      borderPhone.classList.add('contacts__phone-border--show');
 
     } else {
-      borderPhone.style = 'display: none';
+      borderPhone.classList.remove('contacts__phone-border--show');
     }
   };
 
@@ -543,7 +543,7 @@ if (reviewsSlider) {
               phoneInput.classList.remove('correct');
               textInput.classList.remove('correct');
 
-              borderPhone.style = 'display: none';
+              borderPhone.classList.remove('contacts__phone-border--show');
 
               showSuccessMessages();
             }, 500);

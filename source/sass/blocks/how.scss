@@ -13,7 +13,7 @@
     content: "";
     width: 100%;
     min-height: 1208px;
-    transform: translateY(-58px);
+    transform: translateY(-60px);
 
     @include bg-image("../img/all/how__bg@1x.png", contain);
     background-size: 100%;
@@ -29,7 +29,7 @@
   }
 
   &__inner {
-    padding: 176px 0 0;
+    padding: 174px 0 0;
     width: 48.3%;
 
     h2 {

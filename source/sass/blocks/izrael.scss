@@ -54,10 +54,10 @@
     list-style: none;
     display: grid;
 
-    grid-template-columns: minmax(auto, 482px) minmax(auto, 211px) minmax(auto, 200px) minmax(auto, 214px);
-    justify-content: space-between;
+    grid-template-columns: minmax(370px, 482px) minmax(211px, 211px) minmax(180px, 200px) minmax(211px, 214px);
 
     grid-row-gap: 30px;
+    grid-column-gap: 15px;
 
     grid-template-areas:
       "big foto2 foto3 foto3"
