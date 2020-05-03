@@ -3,6 +3,7 @@
 
   max-width: 1566px;
   min-height: 583px;
+
   background-color: $promo-bg-color;
 
   @include bg-image("../img/all/promo__bg@1x.jpg", cover);

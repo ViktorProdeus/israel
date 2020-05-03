@@ -2452,6 +2452,7 @@ input:focus {
   margin: 0 auto;
   max-width: 1566px;
   min-height: 583px;
+  background-color: #ffe3d9;
   background-image: url("../img/all/promo__bg@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
