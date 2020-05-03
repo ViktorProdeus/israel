@@ -7,15 +7,20 @@
 
   var userPhoneBlockContacts = document.querySelector('.contacts__feedback-phone input');
 
+  var maskOptions = {
+    mask: '+{7}(000)000-00-00',
+  };
+
   if (userPhoneBlockWant) {
-    window.imaskJS(userPhoneBlockWant, {mask: '+{7}(000)000-00-00'});
+    window.imaskJS(userPhoneBlockWant, maskOptions);
   }
 
   if (userPhoneBlockPopup) {
-    window.imaskJS(userPhoneBlockPopup, {mask: '+{7}(000)000-00-00'});
+    window.imaskJS(userPhoneBlockPopup, maskOptions);
   }
+
   if (userPhoneBlockContacts) {
-    window.imaskJS(userPhoneBlockContacts, {mask: '+{7}(000)000-00-00'});
+    window.imaskJS(userPhoneBlockContacts, maskOptions);
   }
 
 })();

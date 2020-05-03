@@ -1381,8 +1381,7 @@ input:focus {
   .programs__item-tab {
     width: 228px;
     min-height: 68px;
-    padding: 16px 30px 16px 20px;
-    margin-bottom: 3px;
+    padding: 13px 30px 13px 20px;
     box-sizing: border-box; }
   .programs__item-tab--active {
     position: relative;
@@ -1401,27 +1400,29 @@ input:focus {
       cursor: auto; }
       .programs__item-tab--active button:hover {
         color: white; }
-  .programs__item-tab--active .programs__btn--general::before, .programs__item-tab--active .programs__btn--general:hover::before {
+  .programs__item-tab--active .programs__btn--general span::before,
+  .programs__item-tab--active .programs__btn--general:hover span::before {
     background-image: url("../img/all/icons_sprite.png");
     background-position: -10px -120px; }
-  .programs__item-tab--active .programs__btn--stady::before, .programs__item-tab--active .programs__btn--stady:hover::before {
+  .programs__item-tab--active .programs__btn--stady span::before,
+  .programs__item-tab--active .programs__btn--stady:hover span::before {
     background-image: url("../img/all/icons_sprite.png");
     background-position: -10px -10px; }
-  .programs__item-tab--active .programs__btn--internships::before, .programs__item-tab--active .programs__btn--internships:hover::before {
+  .programs__item-tab--active .programs__btn--internships span::before,
+  .programs__item-tab--active .programs__btn--internships:hover span::before {
     background-image: url("../img/all/icons_sprite.png");
     background-position: -174px -10px; }
-  .programs__item-tab--active .programs__btn--volunteering::before, .programs__item-tab--active .programs__btn--volunteering:hover::before {
+  .programs__item-tab--active .programs__btn--volunteering span::before,
+  .programs__item-tab--active .programs__btn--volunteering:hover span::before {
     background-image: url("../img/all/icons_sprite.png");
     background-position: -66px -65px; }
-  .programs__item-tab--active .programs__btn--religious::before, .programs__item-tab--active .programs__btn--religious:hover::before {
+  .programs__item-tab--active .programs__btn--religious span::before,
+  .programs__item-tab--active .programs__btn--religious:hover span::before {
     background-image: url("../img/all/icons_sprite.png");
     background-position: -10px -173px; }
   .programs__btn {
     position: relative;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-family: "Firasans", "Arial", sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -1429,73 +1430,78 @@ input:focus {
     border: 0;
     background-color: transparent;
     cursor: pointer; }
+    .programs__btn span {
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
     .programs__btn:hover {
       color: #ffc341; }
     .programs__btn:focus {
       outline: none; }
-    .programs__btn::before {
+    .programs__btn span::before {
       display: block;
       content: "";
       background-position: center;
       background-repeat: no-repeat; }
   .programs__btn--general {
     min-width: 102px; }
-    .programs__btn--general::before {
+    .programs__btn--general span::before {
       width: 28px;
       height: 33px;
       margin-left: 4px;
       background-image: url("../img/all/icons_sprite.png");
       background-position: -106px -120px; }
-    .programs__btn--general:hover::before {
+    .programs__btn--general:hover span::before {
       background-image: url("../img/all/icons_sprite.png");
       background-position: -58px -120px; }
   .programs__btn--stady {
     min-width: 167px; }
-    .programs__btn--stady::before {
+    .programs__btn--stady span::before {
       width: 36px;
       height: 35px;
       background-image: url("../img/all/icons_sprite.png");
       background-position: -10px -65px; }
-    .programs__btn--stady:hover::before {
+    .programs__btn--stady:hover span::before {
       background-image: url("../img/all/icons_sprite.png");
       background-position: -66px -10px; }
     .programs__btn--stady span {
-      margin-top: 3px; }
+      margin-top: 7px; }
   .programs__btn--internships {
     min-width: 136px; }
-    .programs__btn--internships::before {
-      margin: 5px 0 0 2px;
+    .programs__btn--internships span::before {
+      margin: 0 0 0 2px;
       width: 32px;
       height: 25px;
       background-image: url("../img/all/icons_sprite.png");
       background-position: -174px -100px; }
-    .programs__btn--internships:hover::before {
+    .programs__btn--internships:hover span::before {
       background-image: url("../img/all/icons_sprite.png");
       background-position: -174px -55px; }
     .programs__btn--internships span {
       margin-top: 10px; }
   .programs__btn--volunteering {
     min-width: 151px; }
-    .programs__btn--volunteering::before {
-      margin: 5px 0 0 2px;
+    .programs__btn--volunteering span::before {
+      margin: 0 0 0 2px;
       width: 32px;
       height: 29px;
       background-image: url("../img/all/icons_sprite.png");
       background-position: -122px -59px; }
-    .programs__btn--volunteering:hover::before {
+    .programs__btn--volunteering:hover span::before {
       background-image: url("../img/all/icons_sprite.png");
       background-position: -122px -10px; }
     .programs__btn--volunteering span {
-      margin-top: 5px; }
+      margin-top: 12px; }
   .programs__btn--religious {
     min-width: 146px; }
-    .programs__btn--religious::before {
-      margin: 7px 0 0 6px;
+    .programs__btn--religious span::before {
+      margin: 0 0 0 6px;
       width: 23px;
       height: 25px;
       background-image: url("../img/all/icons_sprite.png");
       background-position: -96px -173px; }
-    .programs__btn--religious:hover::before {
+    .programs__btn--religious:hover span::before {
       background-image: url("../img/all/icons_sprite.png");
       background-position: -53px -173px; }
     .programs__btn--religious span {
@@ -1598,6 +1604,8 @@ input:focus {
           height: 35px; }
       .programs__btn {
         opacity: 0.4; }
+        .programs__btn span {
+          margin-top: 0; }
         .programs__btn:hover {
           opacity: 1;
           color: #ffc341; }
@@ -1613,15 +1621,17 @@ input:focus {
         width: 132px; }
       .programs__btn--stady {
         min-width: 154px; }
+        .programs__btn--stady span {
+          margin-top: 0; }
       .programs__btn--internships::before {
         margin: 0; }
       .programs__btn--internships span {
         margin: 0; }
-      .programs__btn--volunteering::before {
+      .programs__btn--volunteering span::before {
         margin: 0; }
       .programs__btn--volunteering span {
         margin: 0; }
-      .programs__btn--religious::before {
+      .programs__btn--religious span::before {
         margin-top: 0; }
       .programs__btn--religious span {
         margin: 0 13px 0 0; }
@@ -1632,7 +1642,7 @@ input:focus {
       .programs__list-content {
         width: auto; }
       .programs__item-content h3 {
-        margin-top: 21px;
+        margin-top: 23px;
         margin-bottom: 15px; }
       .programs__item-content p {
         min-width: 90%;
@@ -2961,23 +2971,28 @@ input:focus {
         background-image: url("../img/all/marker.png");
         background-position: 0 0;
         background-repeat: no-repeat; }
-    .contacts__city b {
+    .contacts__city a {
       position: relative;
       display: inline-block;
       vertical-align: baseline;
       margin-left: 14px;
+      font: inherit;
+      color: rgba(72, 72, 72, 0.74);
+      font-weight: 700;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.07em; }
-      .contacts__city b::before {
+      .contacts__city a::before {
+        transition: opacity 0.2s linear;
         position: absolute;
+        opacity: 1;
         content: "";
         width: 100%;
         height: 1px;
         left: 0;
         top: 17px;
         background-image: url("../img/svg/border-city.svg"); }
-      .contacts__city b::after {
+      .contacts__city a::after {
         position: absolute;
         content: "";
         width: 16px;
@@ -2985,6 +3000,8 @@ input:focus {
         right: -27px;
         top: 0;
         background-image: url("../img/all/gps.png"); }
+      .contacts__city a:hover::before {
+        opacity: 0; }
   .contacts__guide {
     display: flex;
     margin-bottom: 26px; }

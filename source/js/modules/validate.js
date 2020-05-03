@@ -91,7 +91,7 @@
 
   var checkPhoneInputsValidity = function (el) {
     var flag = true;
-    if (el.value === '' || el.value.length < 16) {
+    if (el.value.length < 16) {
       flag = false;
     }
     return flag;
@@ -177,6 +177,7 @@
           if (checkNameInputsValidity(textInput) && checkPhoneInputsValidity(phoneInput)) {
             setTimeout(function () {
               form.reset();
+
               phoneInput.classList.remove('correct');
               textInput.classList.remove('correct');
 
