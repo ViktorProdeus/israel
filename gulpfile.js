@@ -26,7 +26,7 @@ gulp.task("css", function () {
       includePaths: require("node-normalize-scss").includePaths
     }))
     .pipe(postcss([autoprefixer({
-      grid: true, overrideBrowserslist: ['Ie >= 11, IOS >= 12, > 0.2%, Safari >= 11']
+      grid: true, overrideBrowserslist: ['Ie >= 11, IOS >= 12, > 0.2%, Safari >= 10']
     })]))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
