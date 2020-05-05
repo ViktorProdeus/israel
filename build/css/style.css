@@ -2814,8 +2814,8 @@ input:focus {
 @-webkit-keyframes slideInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -50%, 0);
-            transform: translate3d(0, -50%, 0);
+    -webkit-transform: translate3d(0, -20%, 0);
+            transform: translate3d(0, -20%, 0);
     visibility: visible; }
   to {
     opacity: 1;
@@ -2825,8 +2825,8 @@ input:focus {
 @keyframes slideInDown {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0, -50%, 0);
-            transform: translate3d(0, -50%, 0);
+    -webkit-transform: translate3d(0, -20%, 0);
+            transform: translate3d(0, -20%, 0);
     visibility: visible; }
   to {
     opacity: 1;
