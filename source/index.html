@@ -31,16 +31,13 @@
               srcset="img/all/logo@1x.png 1x, img/all/logo@2x.png 2x" alt="логотип">
           </a>
 
-          <!-- <div class="main-header__wrapper-phone"> -->
-            <a class="main-header__phone" href="tel:+(972)2–621–6581" aria-label="телефон компании">
-              + (972) 2 – 621 –
-              6581
-            </a>
+          <a class="main-header__phone" href="tel:+(972)2–621–6581" aria-label="телефон компании">+ (972) 2 – 621 –
+            6581</a>
 
-            <a href="#" class="main-header__order open-order-js">
-              заказать звонок
-            </a>
-          <!-- </div> -->
+          <a href="#" class="main-header__order open-order-js">
+            заказать звонок
+          </a>
+
         </header>
 
         <p>
@@ -244,8 +241,7 @@
             <label for="want-feedback-phone"><span class="visually-hidden">Введите ваш телефон</span></label>
 
             <div class="field want__wrapp-elements">
-              <input type="tel" name="want-feedback-phone" id="want-feedback-phone" placeholder="Телефон" minlength="26"
-                maxlength="26" required autocomplete="off">
+              <input type="tel" name="want-feedback-phone" id="want-feedback-phone" placeholder="Телефон" maxlength="16" autocomplete="off">
 
               <button class="btn want__submit submit-js" type="submit">перезвоните мне</button>
             </div>
@@ -912,13 +908,13 @@
                   </label>
 
                   <input type="text" name="contacts-name" id="contacts-name" placeholder="Имя" minlength="1"
-                    maxlength="37" required autocomplete="off">
+                    maxlength="37" autocomplete="off">
                 </div>
 
                 <div class="field contacts__feedback-phone">
                   <label for="contacts-phone"><span class="visually-hidden">Введите ваш телефон</span></label>
-                  <input type="tel" name="contacts-phone" id="contacts-phone" placeholder="Телефон" minlength="26"
-                    maxlength="26" required autocomplete="off">
+                  <input type="tel" name="contacts-phone" id="contacts-phone" placeholder="Телефон"
+                    maxlength="16" autocomplete="off">
 
                   <span class="contacts__phone-border"></span>
                 </div>
@@ -997,20 +993,18 @@
 
           <div class="field popup__name">
             <label for="popup-name"><span class="visually-hidden">Введите ваше имя</span></label>
-            <input type="text" name="popup-name" id="popup-name" placeholder="Имя" minlength="1" maxlength="37" required
-              autocomplete="off">
+            <input type="text" name="popup-name" id="popup-name" placeholder="Имя" minlength="1" maxlength="37" autocomplete="off">
           </div>
 
           <div class="field popup__phone">
             <label for="popup-phone"><span class="visually-hidden">Введите ваш телефон</span></label>
-            <input type="tel" name="popup-phone" id="popup-phone" placeholder="Телефон" minlength="16" maxlength="16"
-              required autocomplete="off">
+            <input type="tel" name="popup-phone" id="popup-phone" placeholder="Телефон" maxlength="16"  autocomplete="off">
           </div>
 
           <button class="btn popup__btn submit-js" type="submit">перезвоните мне</button>
 
           <div class="popup__checkbox checkbox-js">
-            <input type="checkbox" name="popup-checkbox" id="popup-checkbox" required>
+            <input type="checkbox" name="popup-checkbox" id="popup-checkbox">
 
             <label for="popup-checkbox">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
           </div>

@@ -370,6 +370,7 @@ if (reviewsSlider) {
 
 (function () {
 
+  var forms = document.querySelectorAll('.form-js form');
   var inputs = document.querySelectorAll('.form-js input');
   var nameInputs = document.querySelectorAll('.form-js input[type=text]');
   var phoneInputs = document.querySelectorAll('.form-js input[type=tel]');
@@ -512,6 +513,14 @@ if (reviewsSlider) {
     window.popupSuccess.classList.add('popup--show');
     window.disableScrolling();
   };
+
+  if (forms) {
+    Array.prototype.forEach.call(forms, function (form) {
+      form.addEventListener('submit', function (evt) {
+        evt.preventDefault();
+      });
+    });
+  }
 
   if (submitBtns) {
     Array.prototype.forEach.call(submitBtns, function (el) {
