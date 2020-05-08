@@ -1024,6 +1024,9 @@ p {
 
 input:focus {
   outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 2px solid #ffc341; }
 
 .container {

@@ -54,6 +54,7 @@ p {
 input {
   &:focus {
     outline: none;
+    appearance: none;
 
     border: 2px solid $yellow;
   }
